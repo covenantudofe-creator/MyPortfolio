@@ -19,15 +19,37 @@ function PageIntro({ eyebrow, title, children }) {
 }
 
 function Home() {
-  const featured = resumeData.projects
-    .filter((project) => project.catalogueGroup !== 'Portfolio Projects' && project.title !== 'Coveilla Blog')
-    .slice(0, 3);
+  const featuredTitles = new Set(['Noir Scents', 'Ziki Redesign', 'Start.ng — Whimsical Creator Companion']);
+  const featured = resumeData.projects.filter((project) => featuredTitles.has(project.title));
   return <>
     <Meta title="Software Developer Portfolio" description="Portfolio of Godscovenant Patrick Udofe featuring software products, engineering projects, and technical articles." />
-    <section id="intro" className="intro-section"><div className="container intro-grid">
-      <div className="intro-heading"><div className="eyebrow">A PRACTICAL ENGINEERING MINDSET</div><h2>From idea<br />to <em>useful software.</em></h2><p className="large-copy">I enjoy taking an idea from a user-facing interface through the data and service logic that supports it.</p></div>
-      <div className="intro-detail"><p>My projects include responsive web applications, APIs, database-backed workflows, and contributions to team software.</p><p>I am an early-career developer who keeps learning through hands-on projects, collaboration, and careful problem-solving.</p><Link to="/about" className="button button-outline intro-about-link">About my technology journey <ArrowUpRight size={15} /></Link></div>
-    </div></section>
+    <section className="hero container home-hero" aria-labelledby="home-title">
+      <div className="home-hero-copy">
+        <div className="eyebrow"><span className="eyebrow-line" />SOFTWARE DEVELOPER</div>
+        <h1 id="home-title">Software Developer<br /><em>Frontend &amp; Backend Development</em></h1>
+        <p className="hero-lede">I build practical digital products and responsive web applications, combining thoughtful user experiences with functional engineering. My work spans frontend development, backend systems, API integration, databases, and collaborative software projects.</p>
+        <div className="hero-actions home-hero-actions">
+          <Link className="button button-dark" to="/projects">Explore projects <ArrowRight size={16} /></Link>
+          <Link className="button button-outline" to="/resume">View résumé <ArrowUpRight size={15} /></Link>
+        </div>
+        <Link className="home-hero-contact" to="/contact">Open to useful collaborations <ArrowUpRight size={14} /></Link>
+      </div>
+      <div className="hero-art developer-hero-art" aria-hidden="true">
+        <div className="art-frame">
+          <span className="art-node node-one" /><span className="art-node node-two" /><span className="art-node node-three" />
+          <div className="art-code-card"><span>&lt;/&gt;</span><i>Thoughtful<br />interfaces.<br />Useful systems.</i></div>
+          <span className="art-caption">DESIGN · ENGINEERING · DELIVERY</span>
+        </div>
+        <span className="art-index">01 / SOFTWARE DEVELOPMENT</span>
+      </div>
+    </section>
+    <section className="home-capabilities" aria-label="Technical strengths">
+      <div className="container home-capabilities-grid">
+        <article><span className="eyebrow">01 / FRONTEND</span><h2>Responsive interfaces</h2><p>Clear, accessible experiences built for real devices and users.</p></article>
+        <article><span className="eyebrow">02 / BACKEND</span><h2>APIs &amp; data</h2><p>Service logic, integrations, and database-backed workflows.</p></article>
+        <article><span className="eyebrow">03 / TEAMWORK</span><h2>Collaborative delivery</h2><p>Practical contributions across independent and team software projects.</p></article>
+      </div>
+    </section>
     <section className="section container"><div className="section-heading"><div><div className="eyebrow">SELECTED PROJECTS</div><h2>Software in <em>practice</em></h2></div><Link className="text-link" to="/projects">View all projects <ArrowRight size={16} /></Link></div><div className="article-grid">{featured.map((project) => <article className="article-card home-project-card" key={project.title}><div className="cover cover-technical">{project.image && <img className="cover-image" src={project.image} alt="" loading="lazy" />}<span className="cover-kicker">{project.category}</span>{!project.image && <span className="cover-glyph">&lt;/&gt;</span>}<span className="cover-name">{project.title}</span></div><div className="card-copy"><div className="eyebrow">{project.ownership}</div><h3>{project.title}</h3><p>{project.summary}</p><Link className="text-link" to="/projects">View project details <ArrowUpRight size={15} /></Link></div></article>)}</div></section>
     <section className="category-section"><div className="container"><div className="section-heading"><div><div className="eyebrow">TECHNICAL ARTICLES &amp; INSIGHTS</div><h2>Concepts made <em>clear</em></h2></div><Link className="text-link" to="/writing">Browse articles <ArrowRight size={16} /></Link></div><div className="article-grid">{articles.slice(0, 3).map((article) => <ArticleCard key={article.slug} article={article} />)}</div></div></section>
     <section className="home-cta container"><div><div className="eyebrow">LET’S BUILD SOMETHING USEFUL</div><h2>Have a technical<br />project in <em>mind?</em></h2></div><div className="hero-actions"><Link className="button button-dark" to="/resume">View technical résumé <ArrowRight size={17} /></Link><Link className="button button-outline" to="/contact">Get in touch</Link></div></section>

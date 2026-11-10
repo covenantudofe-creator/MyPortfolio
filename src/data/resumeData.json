@@ -147,6 +147,7 @@
     {
       "catalogueGroup": "Independently Built Products",
       "title": "Ziki Redesign",
+      "image": "/images/ziki-redesign-desktop.png",
       "category": "Human-Controlled Collaborative Workspace Prototype",
       "summary": "A browser-based collaboration workspace that helps contributors explore issue opportunities, shape reviewable plans, and keep approval decisions with a person. The seven-agent crew and workflow are local simulations rather than connected AI or repository services.",
       "purpose": "Demonstrate a human-controlled multi-agent work process with explicit planning, permissions, review, revision, and approval stages.",
@@ -231,7 +232,7 @@
     },
     {
       "catalogueGroup": "Team and Internship Projects",
-      "title": "Start.ng ? Whimsical Creator Companion",
+      "title": "Start.ng — Whimsical Creator Companion",
       "category": "Team Product Contribution ? Frontend Interaction",
       "summary": "A contribution to start.ng, a community platform for discovering and playing free browser games, publishing community-created games, and visiting games at individual addresses. The live site identifies itself as built by the HNG community.",
       "purpose": "Add a friendly creator-focused interaction to a larger browser-gaming platform and invite visitors to submit a game.",
