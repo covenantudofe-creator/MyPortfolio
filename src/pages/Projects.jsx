@@ -2,13 +2,14 @@ import Meta from '../components/Meta.jsx';
 import { Link } from 'react-router-dom';
 import resumeData from '../data/resumeData.json';
 import { ArrowUpRight } from 'lucide-react';
+import { assetPath } from '../utils/assetPath.js';
 
 const groups = ['Independently Built Products', 'Team and Internship Projects', 'Independent Frontend Projects', 'Portfolio Projects'];
 const allProjects = [...resumeData.projects, ...resumeData.additionalProjects];
 
 function ProjectDetails({ project }) {
   return <details className="resume-project-card project-catalogue-card">
-    <summary><span className="resume-project-number">↗</span><div>{project.image && <img className="project-detail-image" src={project.image} alt={`${project.title} project preview`} loading="lazy" />}<span className="eyebrow">{project.category}</span><h3>{project.title}</h3><p>{project.summary}</p><span className="resume-status">{project.status || project.ownership}</span></div><span className="resume-expand">Project details <ArrowUpRight size={15} /></span></summary>
+    <summary><span className="resume-project-number">↗</span><div>{project.image && <img className="project-detail-image" src={assetPath(project.image)} alt={`${project.title} project preview`} loading="lazy" />}<span className="eyebrow">{project.category}</span><h3>{project.title}</h3><p>{project.summary}</p><span className="resume-status">{project.status || project.ownership}</span></div><span className="resume-expand">Project details <ArrowUpRight size={15} /></span></summary>
     <div className="resume-project-detail">
       <div><h4>Purpose</h4><p>{project.purpose || project.summary}</p></div>
       <div><h4>Problem / context</h4><p>{project.problem || 'The available project documentation does not state a separate problem statement.'}</p></div>

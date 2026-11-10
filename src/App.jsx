@@ -13,6 +13,7 @@ import PortfolioAssistant from './components/PortfolioAssistant.jsx';
 import Resume from './pages/Resume.jsx';
 import Projects from './pages/Projects.jsx';
 import ProfilePortrait from './components/ProfilePortrait.jsx';
+import { assetPath } from './utils/assetPath.js';
 
 function PageIntro({ eyebrow, title, children }) {
   return <section className="page-intro container"><div className="eyebrow">{eyebrow}</div><h1>{title}</h1>{children && <p>{children}</p>}</section>;
@@ -23,22 +24,12 @@ function Home() {
     .filter((project) => project.catalogueGroup !== 'Portfolio Projects' && project.title !== 'Coveilla Blog')
     .slice(0, 3);
   return <>
-    <Meta title="Software Developer | Frontend & Backend Development" description="Software development portfolio of Godscovenant Patrick Udofe, featuring practical web products, collaborative projects, engineering contributions, and technical articles." />
-    <section className="hero container">
-      <div className="hero-text"><div className="eyebrow"><span className="eyebrow-line" /> SOFTWARE DEVELOPMENT · FRONTEND · BACKEND</div>
-        <h1>Software Developer<br /><em>Frontend &amp; Backend Development</em></h1>
-        <p className="hero-lede">I build practical digital products and responsive web applications, combining thoughtful user experiences with functional engineering. My work spans frontend development, backend systems, API integration, databases, and collaborative software projects.</p>
-        <div className="hero-actions"><Link className="button button-dark" to="/projects">Explore projects <ArrowRight size={17} /></Link><Link className="button button-outline" to="/resume">View résumé</Link></div>
-        <div className="hero-note"><span className="note-dot" /> Independent products. Team contributions. Continuous learning.</div>
-      </div>
-      <div className="hero-art developer-hero-art" aria-label="Software development illustration"><div className="art-frame"><div className="art-sun" /><div className="art-arch" /><div className="art-code-card"><span>&lt;/&gt;</span><i>Build<br />· test<br />· improve</i></div><div className="art-node node-one" /><div className="art-node node-two" /><div className="art-node node-three" /><span className="art-caption">SOFTWARE · SYSTEMS · PEOPLE</span></div><span className="art-index">01 / 04</span></div>
-      <a href="#intro" className="scroll-cue">SCROLL TO EXPLORE <ArrowRight size={15} /></a>
-    </section>
+    <Meta title="Software Developer Portfolio" description="Portfolio of Godscovenant Patrick Udofe featuring software products, engineering projects, and technical articles." />
     <section id="intro" className="intro-section"><div className="container intro-grid">
       <div className="intro-heading"><div className="eyebrow">A PRACTICAL ENGINEERING MINDSET</div><h2>From idea<br />to <em>useful software.</em></h2><p className="large-copy">I enjoy taking an idea from a user-facing interface through the data and service logic that supports it.</p></div>
       <div className="intro-detail"><p>My projects include responsive web applications, APIs, database-backed workflows, and contributions to team software.</p><p>I am an early-career developer who keeps learning through hands-on projects, collaboration, and careful problem-solving.</p><Link to="/about" className="button button-outline intro-about-link">About my technology journey <ArrowUpRight size={15} /></Link></div>
     </div></section>
-    <section className="section container"><div className="section-heading"><div><div className="eyebrow">SELECTED PROJECTS</div><h2>Software in <em>practice</em></h2></div><Link className="text-link" to="/projects">View all projects <ArrowRight size={16} /></Link></div><div className="article-grid">{featured.map((project) => <article className="article-card home-project-card" key={project.title}><div className="cover cover-technical">{project.image && <img className="cover-image" src={project.image} alt="" loading="lazy" />}<span className="cover-kicker">{project.category}</span>{!project.image && <span className="cover-glyph">&lt;/&gt;</span>}<span className="cover-name">{project.title}</span></div><div className="card-copy"><div className="eyebrow">{project.ownership}</div><h3>{project.title}</h3><p>{project.summary}</p><Link className="text-link" to="/projects">View project details <ArrowUpRight size={15} /></Link></div></article>)}</div></section>
+    <section className="section container"><div className="section-heading"><div><div className="eyebrow">SELECTED PROJECTS</div><h2>Software in <em>practice</em></h2></div><Link className="text-link" to="/projects">View all projects <ArrowRight size={16} /></Link></div><div className="article-grid">{featured.map((project) => <article className="article-card home-project-card" key={project.title}><div className="cover cover-technical">{project.image && <img className="cover-image" src={assetPath(project.image)} alt="" loading="lazy" />}<span className="cover-kicker">{project.category}</span>{!project.image && <span className="cover-glyph">&lt;/&gt;</span>}<span className="cover-name">{project.title}</span></div><div className="card-copy"><div className="eyebrow">{project.ownership}</div><h3>{project.title}</h3><p>{project.summary}</p><Link className="text-link" to="/projects">View project details <ArrowUpRight size={15} /></Link></div></article>)}</div></section>
     <section className="category-section"><div className="container"><div className="section-heading"><div><div className="eyebrow">TECHNICAL ARTICLES &amp; INSIGHTS</div><h2>Concepts made <em>clear</em></h2></div><Link className="text-link" to="/writing">Browse articles <ArrowRight size={16} /></Link></div><div className="article-grid">{articles.slice(0, 3).map((article) => <ArticleCard key={article.slug} article={article} />)}</div></div></section>
     <section className="home-cta container"><div><div className="eyebrow">LET’S BUILD SOMETHING USEFUL</div><h2>Have a technical<br />project in <em>mind?</em></h2></div><div className="hero-actions"><Link className="button button-dark" to="/resume">View technical résumé <ArrowRight size={17} /></Link><Link className="button button-outline" to="/contact">Get in touch</Link></div></section>
   </>;
@@ -48,10 +39,11 @@ function About() {
   return <>
     <Meta title="About the Developer" description="Learn about Godscovenant Patrick Udofe’s software development journey, frontend and backend interests, collaborative projects, and technical education." />
     <PageIntro eyebrow="ABOUT THE DEVELOPER" title={<>Building with<br /><em>curiosity and care.</em></>}>
-      I am an early-career software developer interested in practical applications, clear interfaces, backend systems, and solving real workflow problems.
+      My name is Godscovenant Patrick Udofe, and I'm a software developer driven by curiosity, problem-solving, and the challenge of turning ideas into working products. I enjoy exploring how technology works, building solutions that make complex processes simpler, and transforming concepts into digital experiences people can actually use.
     </PageIntro>
     <section className="about-layout container"><ProfilePortrait /><div className="prose about-prose">
-      <p className="lead">I’m Godscovenant Patrick Udofe. My technology journey is shaped by hands-on projects, collaborative development, and a steady interest in how software can make everyday tasks clearer and more useful.</p>
+      <p className="lead">Beyond software development, I write B2B technology articles, breaking down technical concepts and exploring how technology shapes businesses and everyday operations. I've also completed several online courses to strengthen my knowledge across software development, technology, and technical communication.</p>
+      <p>Whether I'm building applications, exploring new technologies, or writing about emerging trends, I'm always looking for opportunities to learn, solve problems, and create meaningful work.</p>
       <h2>Frontend and backend development</h2>
       <p>I work with HTML, CSS, JavaScript, React, and Vite to build responsive interfaces. My project experience also includes Python, FastAPI, REST APIs, SQLite, PostgreSQL exploration, and connecting user-facing applications to backend services.</p>
       <p>Across independent products and team projects, I have worked on e-commerce, content platforms, task workflows, interface prototypes, and reusable portfolio experiences. The project catalogue distinguishes work I built independently from team-wide features and specific open-source contributions.</p>

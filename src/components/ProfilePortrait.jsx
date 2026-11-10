@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { assetPath } from '../utils/assetPath.js'
 
 export default function ProfilePortrait() {
   const [available, setAvailable] = useState(true)
@@ -7,7 +8,7 @@ export default function ProfilePortrait() {
     <div className="about-art portrait-frame">
       {available ? (
         <img
-          src="/images/profile-photo.jpg"
+          src={assetPath('/images/profile-photo.jpg')}
           alt="Portrait of Godscovenant Patrick Udofe"
           loading="lazy"
           onError={() => setAvailable(false)}
