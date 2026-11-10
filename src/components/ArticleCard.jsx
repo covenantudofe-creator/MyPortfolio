@@ -1,6 +1,5 @@
-﻿import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { ArrowUpRight, Clock3 } from 'lucide-react'
-import { assetPath } from '../utils/assetPath.js'
 
 const coverGlyphs = { saas: 'S', cloud: '☁', api: '↗', security: '◈', ai: '✳', blockchain: '⬡', technical: '⌘' }
 
@@ -8,7 +7,7 @@ export function Cover({ type = 'technical', label, image }) {
   const title = label || type
   return (
     <div className={`cover cover-${type}${image ? ' cover-with-image' : ''}`} aria-label={`${title} ${image ? 'image' : 'designed cover'}`}>
-      {image && <img className="cover-image" src={assetPath(image)} alt={`${title} editorial image`} loading="lazy" />}
+      {image && <img className="cover-image" src={image} alt={`${title} editorial image`} loading="lazy" />}
       <span className="cover-kicker">TECHNICAL FIELD NOTES</span>
       {!image && <span className="cover-glyph">{coverGlyphs[type] || '✳'}</span>}
       <span className="cover-name">{title}</span>

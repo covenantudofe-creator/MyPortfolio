@@ -4,7 +4,6 @@ import { ArrowDownToLine, ArrowUpRight, BriefcaseBusiness, GraduationCap, Mail }
 import Meta from '../components/Meta.jsx';
 import { CONTACT_EMAIL, CONTACT_PHONE, SOCIAL_PROFILES } from '../data/contact.js';
 import resumeData from '../data/resumeData.json';
-import { assetPath } from '../utils/assetPath.js';
 
 const allProjects = [...resumeData.projects, ...resumeData.additionalProjects];
 const projectCategories = ['All projects', ...new Set(allProjects.map((project) => project.category))];
@@ -19,7 +18,7 @@ function ProjectLinks({ links = [] }) {
 
 function ProjectCard({ project, index }) {
   return <details className="resume-project-card" key={project.title}>
-    <summary><span className="resume-project-number">{String(index + 1).padStart(2, '0')}</span><div>{project.image && <img className="project-detail-image" src={assetPath(project.image)} alt={`${project.title} project preview`} loading="lazy" />}<span className="eyebrow">{project.category}</span><h3>{project.title}</h3><p>{project.summary}</p><span className="resume-status">{project.status || project.ownership}</span></div><span className="resume-expand">View Project Details <ArrowUpRight size={15} /></span></summary>
+    <summary><span className="resume-project-number">{String(index + 1).padStart(2, '0')}</span><div>{project.image && <img className="project-detail-image" src={project.image} alt={`${project.title} project preview`} loading="lazy" />}<span className="eyebrow">{project.category}</span><h3>{project.title}</h3><p>{project.summary}</p><span className="resume-status">{project.status || project.ownership}</span></div><span className="resume-expand">View Project Details <ArrowUpRight size={15} /></span></summary>
     <div className="resume-project-detail">
       {project.purpose && <div><h4>Purpose</h4><p>{project.purpose}</p></div>}
       {project.problem && <div><h4>Problem / context</h4><p>{project.problem}</p></div>}
@@ -47,7 +46,7 @@ export default function Resume() {
       <h1>Software Developer<br /><em>Frontend &amp; Backend</em></h1>
       <p className="page-deck">{resumeData.intro}</p>
       <div className="resume-actions">
-        <a className="button button-dark" href={assetPath(resumeData.downloadPath)} download="Godscovenant_Patrick_Udofe_Resume.pdf">Download Resume <ArrowDownToLine size={16} /></a>
+        <a className="button button-dark" href={resumeData.downloadPath} download="Godscovenant_Patrick_Udofe_Resume.pdf">Download Resume <ArrowDownToLine size={16} /></a>
         <a className="button button-outline" href={`mailto:${CONTACT_EMAIL}`}>Contact Me <Mail size={16} /></a>
       </div>
       <div className="resume-contact-links"><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a><a href={`tel:${CONTACT_PHONE}`}>{CONTACT_PHONE}</a><a href={SOCIAL_PROFILES.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn <ArrowUpRight size={13} /></a><a href={SOCIAL_PROFILES.github} target="_blank" rel="noopener noreferrer">GitHub <ArrowUpRight size={13} /></a></div>

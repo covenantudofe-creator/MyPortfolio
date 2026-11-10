@@ -30,8 +30,4 @@ The form validates its fields and prepares a message in the visitor’s default 
 
 ## Deployment
 
-Run `npm run build` and deploy `dist/` to a static host configured to serve `index.html` for client-side routes.
-
-### GitHub Pages
-
-The workflow at `.github/workflows/deploy.yml` builds and deploys this project to `https://covenantudofe-creator.github.io/MyPortfolio/` whenever `main` is updated. In the repository settings, open **Settings → Pages** and set **Build and deployment → Source** to **GitHub Actions**. The Vite base path is `/MyPortfolio/`; the build also emits `dist/404.html` so client-side routes load when opened or refreshed directly.
+Deploy the generated `dist/` directory to Vercel. Vercel builds Vite projects with the standard root path and serves client-side routes.

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/create-pages-fallback.mjs",
+    "build": "vite build",
     "preview": "vite preview",
     "resume:pdf": "python scripts/generate_resume_pdf.py"
   },
