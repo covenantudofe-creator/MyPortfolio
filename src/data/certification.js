@@ -1,0 +1,20 @@
+const certifications = [
+  {
+    id: 'frontend-development-ts-academy',
+    title: 'Frontend Development',
+    issuer: 'TS Academy',
+    completed: 'July 25, 2026',
+    file: '/documents/certificates/frontend-development-certificate.jpg',
+    available: true,
+  },
+  {
+    id: 'ai-agents-for-beginners-python-sololearn',
+    title: 'AI Agents for Beginners: How They Work (Python)',
+    issuer: 'SoloLearn',
+    completed: 'October 22, 2026',
+    file: '/documents/certificates/sololearn-certificate.jpg',
+    available: true,
+  },
+];
+
+export default certifications;

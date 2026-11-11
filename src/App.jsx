@@ -3,6 +3,7 @@ import { Link, Navigate, Route, Routes, useParams, useSearchParams } from 'react
 import { ArrowRight, ArrowUpRight, Mail, Search } from 'lucide-react';
 import { articles, categories } from './data/articles.js';
 import resumeData from './data/resumeData.json';
+import certifications from './data/certification.js';
 import { Navbar, Footer, BackToTop, ReadingProgress } from './components/Shell.jsx';
 import { ArticleCard, Cover } from './components/ArticleCard.jsx';
 import ArticleContent from './components/ArticleContent.jsx';
@@ -13,6 +14,7 @@ import PortfolioAssistant from './components/PortfolioAssistant.jsx';
 import Resume from './pages/Resume.jsx';
 import Projects from './pages/Projects.jsx';
 import ProfilePortrait from './components/ProfilePortrait.jsx';
+import CertificationCard from './components/CertificationCard.jsx';
 
 function PageIntro({ eyebrow, title, children }) {
   return <section className="page-intro container"><div className="eyebrow">{eyebrow}</div><h1>{title}</h1>{children && <p>{children}</p>}</section>;
@@ -52,6 +54,7 @@ function Home() {
     </section>
     <section className="section container"><div className="section-heading"><div><div className="eyebrow">SELECTED PROJECTS</div><h2>Software in <em>practice</em></h2></div><Link className="text-link" to="/projects">View all projects <ArrowRight size={16} /></Link></div><div className="article-grid">{featured.map((project) => <article className="article-card home-project-card" key={project.title}><div className="cover cover-technical">{project.image && <img className="cover-image" src={project.image} alt="" loading="lazy" />}<span className="cover-kicker">{project.category}</span>{!project.image && <span className="cover-glyph">&lt;/&gt;</span>}<span className="cover-name">{project.title}</span></div><div className="card-copy"><div className="eyebrow">{project.ownership}</div><h3>{project.title}</h3><p>{project.summary}</p><Link className="text-link" to="/projects">View project details <ArrowUpRight size={15} /></Link></div></article>)}</div></section>
     <section className="category-section"><div className="container"><div className="section-heading"><div><div className="eyebrow">TECHNICAL ARTICLES &amp; INSIGHTS</div><h2>Concepts made <em>clear</em></h2></div><Link className="text-link" to="/writing">Browse articles <ArrowRight size={16} /></Link></div><div className="article-grid">{articles.slice(0, 3).map((article) => <ArticleCard key={article.slug} article={article} />)}</div></div></section>
+    <section className="home-certification container" aria-labelledby="home-certification-title"><div className="section-heading"><div><div className="eyebrow">PROFESSIONAL DEVELOPMENT</div><h2 id="home-certification-title">Selected <em>certifications</em></h2></div></div><div className="home-certification-list">{certifications.map((certificate) => <CertificationCard compact key={certificate.id} certificate={certificate} />)}</div></section>
     <section className="home-cta container"><div><div className="eyebrow">LET’S BUILD SOMETHING USEFUL</div><h2>Have a technical<br />project in <em>mind?</em></h2></div><div className="hero-actions"><Link className="button button-dark" to="/resume">View technical résumé <ArrowRight size={17} /></Link><Link className="button button-outline" to="/contact">Get in touch</Link></div></section>
   </>;
 }

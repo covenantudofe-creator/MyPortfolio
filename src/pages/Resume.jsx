@@ -4,6 +4,8 @@ import { ArrowDownToLine, ArrowUpRight, BriefcaseBusiness, GraduationCap, Mail }
 import Meta from '../components/Meta.jsx';
 import { CONTACT_EMAIL, CONTACT_PHONE, SOCIAL_PROFILES } from '../data/contact.js';
 import resumeData from '../data/resumeData.json';
+import certifications from '../data/certification.js';
+import CertificationCard from '../components/CertificationCard.jsx';
 
 const allProjects = [...resumeData.projects, ...resumeData.additionalProjects];
 const projectCategories = ['All projects', ...new Set(allProjects.map((project) => project.category))];
@@ -90,6 +92,11 @@ export default function Resume() {
         <article className="resume-education-card"><GraduationCap size={22} /><span className="eyebrow">EDUCATION</span>{resumeData.education.map((item) => <div key={item.qualification}><h3>{item.qualification}</h3><p>{item.institution}</p><small>{item.period}</small></div>)}</article>
         <article className="resume-education-card resume-courses"><span className="eyebrow">COURSEWORK &amp; LEARNING</span><p>{resumeData.notes.developmentRecords}</p><ul>{resumeData.professionalDevelopment.map((course) => <li key={`${course.name}-${course.provider}`}><span>{course.name}</span><small>{course.provider}{course.year !== 'Not provided' ? ` · ${course.year}` : ''}</small></li>)}</ul></article>
       </div>
+    </section>
+
+    <section className="resume-section container" id="certifications" aria-labelledby="resume-certifications-title">
+      <div className="resume-section-heading"><span className="eyebrow">07 / CERTIFICATIONS</span><h2 id="resume-certifications-title">Professional <em>certification</em></h2></div>
+      <div className="resume-certification-list">{certifications.map((certificate) => <CertificationCard key={certificate.id} certificate={certificate} />)}</div>
     </section>
 
     <section className="resume-contact-cta"><div className="container resume-contact-cta-inner"><div><span className="eyebrow">LET’S CONTINUE THE CONVERSATION</span><h2>Good work begins<br />with a <em>good question.</em></h2></div><a className="button button-light" href={`mailto:${CONTACT_EMAIL}`}>Contact Godscovenant <Mail size={16} /></a></div></section>
