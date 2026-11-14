@@ -12,11 +12,17 @@ export const assistantKnowledge = {
   additionalProjects: resumeData.additionalProjects,
   contributions: resumeData.contributions,
   articles,
+  writingSamples: {
+    independent: true,
+    page: '/technical-writing',
+    categories: ['API documentation', 'Developer tutorials', 'Technical explainers', 'Software documentation'],
+  },
 };
 
 export const assistantSuggestedQuestions = [
   'What technologies does she use?',
   'What software projects has she built?',
+  'Can I see her technical writing samples?',
   'What has she contributed to Zedu Desktop?',
   'What is her education?',
   'Can I download her résumé?',

@@ -12,6 +12,7 @@ from urllib.parse import quote
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "src" / "data" / "resumeData.json"
 CONTACT_PATH = ROOT / "src" / "data" / "contactDetails.json"
+CERTIFICATIONS_PATH = ROOT / "src" / "data" / "certifications.json"
 OUTPUT_PATH = ROOT / "public" / "documents" / "Godscovenant_Patrick_Udofe_Resume.pdf"
 
 PAGE_W, PAGE_H = 595.28, 841.89  # A4, points
@@ -190,6 +191,12 @@ def draw_document(data):
     paragraph(data["summary"], size=9.2, leading=13.1)
     paragraph("Professional focus: software development, frontend and backend engineering, API integration, databases, and collaborative project work.", size=8.6, color=MUTED)
 
+    section("Technical Writing")
+    paragraph("Independent B2B technology articles and self-directed documentation samples, not commissioned client work.", size=8.6, color=MUTED)
+    for label, path in (("Documentation and tutorial samples", "/technical-writing"), ("Technical articles", "/writing")):
+        ensure_for(16)
+        page().link_line(label, "View", data["portfolioUrl"].rstrip("/") + path, size=8.2)
+
     section("Technical Experience & Project Work")
     for job in data["experience"]:
         detail = f"{job['role']}  |  {job['period']}"
@@ -282,8 +289,18 @@ def draw_document(data):
         ensure_for(30)
         page().item_heading(edu["qualification"], f"{edu['institution']}  |  {edu['period']}")
 
+    certifications = json.loads(CERTIFICATIONS_PATH.read_text(encoding="utf-8"))
+    if certifications:
+        section("Certifications")
+        for certificate in certifications:
+            ensure_for(32)
+            page().item_heading(certificate["title"], f"{certificate['issuer']}  |  {certificate['completed']}")
+            if certificate.get("available"):
+                link = data["portfolioUrl"].rstrip("/") + certificate["file"]
+                page().link_line("Certificate", "View", link, size=8)
+
     section("Technical Learning")
-    paragraph("Course titles and selected years were supplied by the owner. Certificate documents and completion records were not available in the project; these are listed as training, not verified certifications.", size=8.1, color=MUTED)
+    paragraph("Course titles and selected years were supplied by the owner and are listed as technical learning. The certificate images above are available to view.", size=8.1, color=MUTED)
     for course in data["professionalDevelopment"]:
         ensure_for(15)
         page().text(f"{course['name']}  —  {course['provider']} ({course['year']})", LEFT + 2, page().y, 8.1, "F1", CHARCOAL)

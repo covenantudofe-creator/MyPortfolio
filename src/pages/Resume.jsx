@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowDownToLine, ArrowUpRight, BriefcaseBusiness, GraduationCap, Mail } from 'lucide-react';
+import { ArrowDownToLine, ArrowUpRight, BriefcaseBusiness, FileText, GraduationCap, Mail } from 'lucide-react';
 import Meta from '../components/Meta.jsx';
 import { CONTACT_EMAIL, CONTACT_PHONE, SOCIAL_PROFILES } from '../data/contact.js';
 import resumeData from '../data/resumeData.json';
@@ -42,10 +42,10 @@ export default function Resume() {
     : allProjects.filter((project) => project.category === projectCategory), [projectCategory]);
 
   return <>
-    <Meta title="Software Developer Résumé" description="Explore Godscovenant Patrick Udofe’s technical skills, software projects, engineering contributions, education, and technical learning." />
+    <Meta title="Technical Writer & Software Developer Résumé" description="Technical writing samples, software development projects, experience, skills, education, and certifications for Godscovenant Patrick Udofe." />
     <section className="page-hero container resume-hero">
-      <p className="eyebrow"><span className="eyebrow-line" /> SOFTWARE DEVELOPER RÉSUMÉ</p>
-      <h1>Software Developer<br /><em>Frontend &amp; Backend</em></h1>
+      <p className="eyebrow"><span className="eyebrow-line" /> TECHNICAL WRITER | SOFTWARE DEVELOPER RÉSUMÉ</p>
+      <h1>Technical Writer<br /><em>&amp; Software Developer</em></h1>
       <p className="page-deck">{resumeData.intro}</p>
       <div className="resume-actions">
         <a className="button button-dark" href={resumeData.downloadPath} download="Godscovenant_Patrick_Udofe_Resume.pdf">Download Resume <ArrowDownToLine size={16} /></a>
@@ -82,12 +82,17 @@ export default function Resume() {
     </section>
 
     <section className="resume-section container" aria-labelledby="resume-skills-title">
-      <div className="resume-section-heading"><span className="eyebrow">05 / TECHNICAL CAPABILITIES</span><h2 id="resume-skills-title">Skills &amp; <em>tools</em></h2><p>Categories distinguish project use from foundational knowledge and learning interests.</p></div>
+    <section className="resume-section container" aria-labelledby="resume-writing-title">
+      <div className="resume-section-heading"><span className="eyebrow">05 / TECHNICAL WRITING</span><h2 id="resume-writing-title">Documentation &amp; <em>content</em></h2><p>Independent portfolio samples; not commissioned client work.</p></div>
+      <article className="resume-writing-card"><div><FileText size={19} aria-hidden="true" /><h3>Technical writing samples</h3><p>Six independent B2B technology articles, plus an illustrative API reference, developer tutorials, and software documentation examples. The API contract is a writing sample and is not presented as the HNG project?s API documentation.</p><div className="resume-writing-links"><Link to="/technical-writing">View writing and documentation samples <ArrowUpRight size={13} /></Link><Link to="/writing">Browse technical articles <ArrowUpRight size={13} /></Link></div></div><ul><li>API reference structure, request and response examples, status codes, errors, and test instructions.</li><li>Developer tutorials covering FastAPI, React integration, PostgreSQL, and Postman.</li><li>README, installation, configuration, and troubleshooting guidance.</li></ul></article>
+    </section>
+
+      <div className="resume-section-heading"><span className="eyebrow">06 / TECHNICAL CAPABILITIES</span><h2 id="resume-skills-title">Skills &amp; <em>tools</em></h2><p>Categories distinguish project use from foundational knowledge and learning interests.</p></div>
       <div className="resume-skills-grid">{resumeData.skills.map((group) => <article className="resume-skill-card" key={group.category}><h3>{group.category}</h3><p>{group.basis}</p><div className="resume-tags">{group.items.map((skill) => <span key={skill}>{skill}</span>)}</div></article>)}</div>
     </section>
 
     <section className="resume-section container resume-education-section" aria-labelledby="resume-education-title">
-      <div className="resume-section-heading"><span className="eyebrow">06 / EDUCATION</span><h2 id="resume-education-title">Education &amp; <em>development</em></h2></div>
+      <div className="resume-section-heading"><span className="eyebrow">07 / EDUCATION</span><h2 id="resume-education-title">Education &amp; <em>development</em></h2></div>
       <div className="resume-education-grid">
         <article className="resume-education-card"><GraduationCap size={22} /><span className="eyebrow">EDUCATION</span>{resumeData.education.map((item) => <div key={item.qualification}><h3>{item.qualification}</h3><p>{item.institution}</p><small>{item.period}</small></div>)}</article>
         <article className="resume-education-card resume-courses"><span className="eyebrow">COURSEWORK &amp; LEARNING</span><p>{resumeData.notes.developmentRecords}</p><ul>{resumeData.professionalDevelopment.map((course) => <li key={`${course.name}-${course.provider}`}><span>{course.name}</span><small>{course.provider}{course.year !== 'Not provided' ? ` · ${course.year}` : ''}</small></li>)}</ul></article>
@@ -95,7 +100,7 @@ export default function Resume() {
     </section>
 
     <section className="resume-section container" id="certifications" aria-labelledby="resume-certifications-title">
-      <div className="resume-section-heading"><span className="eyebrow">07 / CERTIFICATIONS</span><h2 id="resume-certifications-title">Professional <em>certification</em></h2></div>
+      <div className="resume-section-heading"><span className="eyebrow">08 / CERTIFICATIONS</span><h2 id="resume-certifications-title">Professional <em>certifications</em></h2></div>
       <div className="resume-certification-list">{certifications.map((certificate) => <CertificationCard key={certificate.id} certificate={certificate} />)}</div>
     </section>
 

@@ -1,602 +1,667 @@
-{
-  "name": "Godscovenant Patrick Udofe",
-  "titles": [
-    "Software Developer",
-    "Frontend Developer",
-    "Backend Development"
-  ],
-  "location": "Nigeria",
-  "downloadPath": "/documents/Godscovenant_Patrick_Udofe_Resume.pdf",
-  "portfolioUrl": null,
-  "intro": "I build practical digital products and responsive web applications, combining thoughtful user experiences with functional engineering. My work spans frontend development, backend systems, API integration, databases, and collaborative software projects.",
-  "summary": "Early-career software developer focused on practical web applications and digital products. Project work spans responsive frontend interfaces, backend APIs, database-backed workflows, integrations, and collaborative software contributions. Continues to build engineering skills through independent projects, team work, and technical learning.",
-  "experience": [
-    {
-      "organization": "Independent Software Projects",
-      "role": "Software Developer",
-      "period": "Independent projects; dates not specified",
-      "summary": "Builds and maintains browser-based products and full-stack application prototypes, with project scope and status documented in the portfolio catalogue.",
-      "highlights": [
-        "Developed independent frontend and full-stack projects using React, JavaScript, Python, and FastAPI.",
-        "Built database-backed task and commerce workflows in independent and collaborative projects.",
-        "Maintains this React and Vite portfolio with technical articles, project information, and contact functionality."
-      ]
-    },
-    {
-      "organization": "HNG Internship 15 ? Team Zedu-Puffin",
-      "role": "Backend / Full-Stack Development Intern",
-      "period": "Dates not specified",
-      "summary": "Contributed within a team to a task-manager project connecting a React and Vite frontend to a Python and FastAPI backend.",
-      "highlights": [
-        "Worked in a collaborative team project with task creation, retrieval, updating, deletion, and task status workflows.",
-        "The project documentation describes a monthly calendar and SQLite persistence.",
-        "The repository documents the overall team product; individual feature ownership is not attributed."
-      ]
-    },
-    {
-      "organization": "TS Academy",
-      "role": "Student Moderator ? Frontend Development Programme",
-      "period": "Dates not specified",
-      "summary": "Supported learners participating in a frontend development programme.",
-      "highlights": [
-        "Helped students set up development environments and use VS Code, CodePen, and GitHub workflows.",
-        "Provided peer guidance as members worked through frontend learning activities."
-      ]
-    }
-  ],
-  "education": [
-    {
-      "qualification": "B.A. Philosophy",
-      "institution": "University of Uyo",
-      "period": "2021–2025"
-    }
-  ],
-  "projects": [
-    {
-      "catalogueGroup": "Independently Built Products",
-      "title": "Noir Scents",
-      "category": "Full-Stack E-commerce Application",
-      "image": "/images/noir-scents.jpg",
-      "summary": "A full-stack perfume storefront for browsing products, maintaining inventory, creating orders, and completing online payment. Its React storefront communicates with a FastAPI service backed by PostgreSQL.",
-      "purpose": "Bring product discovery, stock control, customer checkout, and order administration into one e-commerce application.",
-      "role": "Independently developed and maintained in the owner?s public GitHub repository.",
-      "ownership": "Independent project ? owner-maintained repository",
-      "status": "Live frontend and backend health checks respond.",
-      "technologies": [
-        "React",
-        "Vite",
-        "Python",
-        "FastAPI",
-        "PostgreSQL",
-        "SQLAlchemy",
-        "Google Identity Services",
-        "JWT sessions",
-        "Paystack API",
-        "Mailgun"
-      ],
-      "implemented": [
-        "Product catalogue and inventory management; order creation and management through the API.",
-        "Paystack payment initialization and server-side transaction verification. Creating an order reserves stock; failed or abandoned Paystack payments restore the reserved stock.",
-        "Google sign-in backed by server-side identity-token verification and a seven-day application session.",
-        "Mailgun welcome messages and order confirmations after verified payment; delivery depends on valid server-side Mailgun configuration."
-      ],
-      "notes": [
-        "Customer account, checkout, Paystack transaction, stock restoration, and email flows were not end-to-end tested in the deployed environment.",
-        "Paystack is the only online provider documented as implemented. Flutterwave and OPay are pending integrations; bank transfer is pending/manual. Do not present them as operational payment methods."
-      ],
-      "links": [
-        {
-          "label": "View Live Project",
-          "url": "https://noir-scents-chi.vercel.app/"
-        },
-        {
-          "label": "GitHub Repository",
-          "url": "https://github.com/covenantudofe-creator/Noir_scents"
-        },
-        {
-          "label": "Backend Health",
-          "url": "https://noir-scents-1.onrender.com/health"
-        }
-      ],
-      "problem": "A single storefront and service are needed to connect product browsing, stock tracking, customer orders, and online payment."
-    },
-    {
-      "catalogueGroup": "Independently Built Products",
-      "title": "Coveilla Blog",
-      "category": "Full-Stack Blogging and Content Platform",
-      "image": "/images/coveilla-blog.jpg",
-      "summary": "A reader and administrator platform for browsing and publishing articles, with account access, contact messaging, and newsletter subscriptions.",
-      "purpose": "Give readers access to blog content while providing protected workflows for article management, contact submissions, and newsletter subscriptions.",
-      "role": "Independently built repository; package metadata names Godscovenant Patrick Udofe as author.",
-      "ownership": "Independent project ? repository author verified in package metadata",
-      "status": "Live frontend ? sign-in screen shown at review.",
-      "technologies": [
-        "React 19",
-        "Vite",
-        "React Router",
-        "Three.js",
-        "Node.js",
-        "Express 5",
-        "Sequelize",
-        "Neon PostgreSQL",
-        "JWT",
-        "Google authentication",
-        "bcryptjs"
-      ],
-      "implemented": [
-        "Reader registration and sign-in with password and Google authentication; administrator sign-in is separate and role-protected.",
-        "Article list and individual article retrieval; administrator-only create, edit, and delete routes.",
-        "Contact submissions are stored and sent through the configured email utility; administrators can review and delete stored messages.",
-        "Newsletter subscription, welcome/owner notifications, password-reset messaging, and login notifications are implemented in the repository. Actual delivery depends on deployment email and API configuration."
-      ],
-      "notes": [
-        "The README does not identify a deployed backend API URL. Production reader/admin, database, publishing, and email flows could not be verified in the deployed environment."
-      ],
-      "links": [
-        {
-          "label": "View Live Project",
-          "url": "https://coveillablog.vercel.app/"
-        },
-        {
-          "label": "GitHub Repository",
-          "url": "https://github.com/covenantudofe-creator/Coveillablog"
-        }
-      ],
-      "problem": "Readers need a place to access articles while administrators need protected tools to manage content and submissions."
-    },
-    {
-      "catalogueGroup": "Independently Built Products",
-      "title": "Ziki Redesign",
-      "image": "/images/ziki-redesign-desktop.png",
-      "category": "Human-Controlled Collaborative Workspace Prototype",
-      "summary": "A browser-based collaboration workspace that helps contributors explore issue opportunities, shape reviewable plans, and keep approval decisions with a person. The seven-agent crew and workflow are local simulations rather than connected AI or repository services.",
-      "purpose": "Demonstrate a human-controlled multi-agent work process with explicit planning, permissions, review, revision, and approval stages.",
-      "role": "Built the frontend prototype and its local workflow simulation in the public repository under Godscovenant Udofe?s account.",
-      "ownership": "Independent frontend prototype ? personal public repository",
-      "status": "Live interactive frontend prototype ? local simulations.",
-      "technologies": [
-        "HTML",
-        "CSS",
-        "Vanilla JavaScript ES modules",
-        "Browser localStorage",
-        "Vercel"
-      ],
-      "implemented": [
-        "Seven specialist robot personas, task creation and queues, agent conversations, and local draft preparation.",
-        "Illustrative issue recommendations, plan details, scope, assumptions, risks, dependencies, time estimates, and requested permissions.",
-        "Human review actions: approve a displayed plan, reject it, or request a revision; simulated work status and activity history persist in browser localStorage.",
-        "Responsive workspace navigation and reduced-motion handling."
-      ],
-      "notes": [
-        "Issue examples and agent responses are local demo fixtures/templates. The deployment does not document a specific prior interface problem addressed by the redesign.",
-        "This project is separate from the owner?s Ziki PR #624, which adds automated end-to-end tests to the existing Ziki product."
-      ],
-      "links": [
-        {
-          "label": "View Live Project",
-          "url": "https://ziki-redesign-pearl.vercel.app/"
-        },
-        {
-          "label": "GitHub Repository",
-          "url": "https://github.com/covenantudofe-creator/ziki-redesign"
-        },
-        {
-          "label": "Public App Source Module",
-          "url": "https://ziki-redesign-pearl.vercel.app/src/app.js"
-        }
-      ],
-      "problem": "Demonstrates how a contributor workspace could organize opportunities, plans, permissions, and human review. The source does not document a specific prior interface problem."
-    },
-    {
-      "catalogueGroup": "Team and Internship Projects",
-      "title": "HNG Stage 1 Task Manager",
-      "category": "Full-Stack Team Project",
-      "summary": "A team-built task manager from HNG Internship 15, developed by HNG Tech ? Team Zedu-Puffin, with a React/Vite interface and a Python/FastAPI REST API backed by SQLite.",
-      "purpose": "Help users organize dated tasks and follow their progress through a calendar and task list.",
-      "role": "Team contributor. The repository documents the overall project but does not attribute individual feature ownership to specific contributors.",
-      "ownership": "HNG Internship 15 ? team project ? Team Zedu-Puffin",
-      "status": "Team project; frontend and API documentation are reachable.",
-      "technologies": [
-        "React",
-        "Vite",
-        "Python",
-        "FastAPI",
-        "REST API",
-        "SQLite",
-        "PostgreSQL exploration"
-      ],
-      "implemented": [
-        "Create, retrieve, edit, delete, and complete tasks with descriptions, dates, and in-progress/completed statuses.",
-        "Monthly calendar and task timeline with progress indicators.",
-        "Persistent task records stored in SQLite; the project brief documents PostgreSQL exploration."
-      ],
-      "notes": [
-        "The backend root and /health returned 404 during the check, while /docs and /openapi.json returned 200. Individual task API workflows were not end-to-end tested.",
-        "The README describes team-wide functionality and does not attribute individual endpoint or UI ownership to specific contributors."
-      ],
-      "links": [
-        {
-          "label": "View Live Frontend",
-          "url": "https://hng-stage1-task-nu.vercel.app/"
-        },
-        {
-          "label": "API Documentation",
-          "url": "https://hngstage1-task.onrender.com/docs"
-        },
-        {
-          "label": "GitHub Repository",
-          "url": "https://github.com/covenantudofe-creator/HngStage1_task"
-        }
-      ],
-      "problem": "Users need a way to organize dated tasks and follow progress across a calendar and task list."
-    },
-    {
-      "catalogueGroup": "Team and Internship Projects",
-      "title": "Start.ng — Whimsical Creator Companion",
-      "category": "Team Product Contribution ? Frontend Interaction",
-      "summary": "A contribution to start.ng, a community platform for discovering and playing free browser games, publishing community-created games, and visiting games at individual addresses. The live site identifies itself as built by the HNG community.",
-      "purpose": "Add a friendly creator-focused interaction to a larger browser-gaming platform and invite visitors to submit a game.",
-      "role": "Implemented the creator robot companion and lamp-and-flower profile interaction in a task-specific source branch. The robot has idle reactions and a prompt with a ?Create a game? action; commits also add the companion to public homepage visitors.",
-      "ownership": "Team contribution ? platform identifies as an HNG community product; task-specific commits are in the owner?s public branch.",
-      "status": "Live HNG community platform ? contribution verified in source branch.",
-      "technologies": [
-        "React 18",
-        "TypeScript",
-        "Vite",
-        "CSS",
-        "Google OAuth integration"
-      ],
-      "implemented": [
-        "Whimsical SVG robot companion with idle animation, pointer-aware gaze, introductory prompt, and a create-game action.",
-        "Lamp-and-flower profile interaction and creator-page behavior.",
-        "The wider platform supports game discovery, browser play, game submission, and community features; those platform-wide capabilities are not presented as the owner?s individual work."
-      ],
-      "links": [
-        {
-          "label": "View Live Project",
-          "url": "https://whimsical-design-startng.vercel.app/"
-        },
-        {
-          "label": "GitHub Source Repository",
-          "url": "https://github.com/covenantudofe-creator/start-ng-whimsical-design/tree/feat/hng15-lamp-delight"
-        },
-        {
-          "label": "Robot Companion Commit",
-          "url": "https://github.com/covenantudofe-creator/start-ng-whimsical-design/commit/0d3455167a02bba9161b931e55431777366e742e"
-        },
-        {
-          "label": "Homepage Companion Commit",
-          "url": "https://github.com/covenantudofe-creator/start-ng-whimsical-design/commit/11447be3a408b3cf2245c6d1954a4c6e92592394"
-        }
-      ],
-      "problem": "A large gaming community platform benefits from a welcoming creator interaction that helps visitors discover how to submit a game."
-    },
-    {
-      "catalogueGroup": "Team and Internship Projects",
-      "title": "Zedu Desktop",
-      "category": "Team Software Project ? Flutter Desktop Application",
-      "summary": "A team-developed Flutter application organized with Clean Architecture. Its documented reference vertical slice covers authentication, session state, and API wiring, with desktop and mobile targets.",
-      "purpose": "Provide a cross-platform team communication application with shared infrastructure and an authentication/session flow.",
-      "role": "Team repository contributor. My verified code changes are listed separately under Open-Source Contributions; the broader application is not represented as independent work.",
-      "ownership": "Team project ? repository forked from the Zedu project",
-      "status": "Team repository available; no separate live application deployment was verified.",
-      "technologies": [
-        "Flutter",
-        "Dart",
-        "Clean Architecture",
-        "Material 3",
-        "Riverpod",
-        "GetIt",
-        "GoRouter",
-        "Dio",
-        "Secure Storage",
-        "Mocktail"
-      ],
-      "implemented": [
-        "Repository structure separates presentation, domain, and data layers.",
-        "Authentication/session reference flow uses Riverpod, repository abstractions, remote API access, and secure storage.",
-        "Repository includes unit and widget tests and documents Windows desktop MSIX packaging."
-      ],
-      "notes": [
-        "These are repository-level capabilities. They are not claims that the portfolio owner authored the entire application."
-      ],
-      "links": [
-        {
-          "label": "Team GitHub Repository",
-          "url": "https://github.com/zedu-vulcan/zedu-desktop"
-        },
-        {
-          "label": "Owner Fork",
-          "url": "https://github.com/covenantudofe-creator/zedu-desktop"
-        }
-      ],
-      "problem": "The team project addresses cross-platform communication and account/session workflows; the repository-level scope is distinct from the owner?s individual pull requests."
-    },
-    {
-      "catalogueGroup": "Portfolio Projects",
-      "title": "Portfolio Website",
-      "category": "Personal Portfolio ? React Web Application",
-      "summary": "A responsive technical portfolio featuring software projects, engineering contributions, technical articles, and contact information.",
-      "purpose": "Present verified software projects, technical learning, contributions, and articles in a single professional portfolio.",
-      "role": "Built and maintain this portfolio website.",
-      "ownership": "Personal project",
-      "status": "Current portfolio project",
-      "technologies": [
-        "React",
-        "Vite",
-        "JavaScript",
-        "Tailwind CSS v4",
-        "React Router",
-        "CSS"
-      ],
-      "implemented": [
-        "Six long-form B2B technology articles with original SVG technical diagrams.",
-        "Responsive layouts, category filters, search, article routes, and project detail cards.",
-        "Rule-based portfolio assistant with curated answers; it does not use a live generative AI service.",
-        "Contact form validates input and opens a prefilled mailto draft; the website does not send messages directly.",
-        "Resume page and downloadable PDF."
-      ],
-      "links": [
-        {
-          "label": "Open this portfolio",
-          "url": "/"
-        },
-        {
-          "label": "R?sum? page",
-          "url": "/resume"
-        }
-      ],
-      "problem": "Technical project work, contributions, and articles need a responsive public portfolio with clear project details and contact paths."
-    }
-  ],
-  "contributions": [
-    {
-      "title": "Ziki PR #624 ? Marketing lifecycle Playwright coverage",
-      "organization": "Emerjent / Ziki",
-      "category": "Open-Source Contribution ? Automated End-to-End Testing",
-      "status": "Open pull request ? not merged as of this audit",
-      "summary": "Added browser-level Playwright coverage for proposing a Marketing task with rationale and type, reaching three positive verdicts, creating an issue, bidding and awarding work, accepting the offer, delivering content without a pull request, reviewing and publishing it, and checking persisted participant points and idempotency.",
-      "url": "https://github.com/emerjent/ziki/pull/624",
-      "notes": [
-        "The PR says its end-to-end test was not run locally and expects CI to run the project checks. This is a test contribution to the existing Ziki product, separate from Ziki Redesign."
-      ],
-      "purpose": "Add browser-level regression coverage for the Ziki marketing task lifecycle.",
-      "problem": "The multi-step marketing task lifecycle needs automated coverage across proposal, issue creation, bidding, delivery, review, publication, and points persistence.",
-      "role": "Authored the Playwright end-to-end test in an open pull request; it is not represented as merged.",
-      "technologies": [
-        "Playwright"
-      ]
-    },
-    {
-      "title": "Zedu Desktop PR #27 ? Profile settings crash fix",
-      "organization": "Zedu-Vulcan / Zedu Desktop",
-      "category": "Team Contribution ? Flutter Bug Fix",
-      "status": "Merged ? October 18, 2026",
-      "summary": "Fix for a profile-settings provider crash on desktop.",
-      "url": "https://github.com/zedu-vulcan/zedu-desktop/pull/27",
-      "purpose": "Prevent a profile-settings provider crash on desktop.",
-      "problem": "The reported profile-settings provider failure could crash the desktop application.",
-      "role": "Submitted the fix in a merged team-repository pull request.",
-      "technologies": [
-        "Flutter",
-        "Dart"
-      ]
-    },
-    {
-      "title": "Zedu Desktop PR #71 ? Empty-channel invite action",
-      "organization": "Zedu-Vulcan / Zedu Desktop",
-      "category": "Team Contribution ? Flutter UI",
-      "status": "Open pull request ? not merged as of this audit",
-      "summary": "Proposes an actionable invite call-to-action for the empty-channel state. The change remains an open proposal.",
-      "url": "https://github.com/zedu-vulcan/zedu-desktop/pull/71",
-      "purpose": "Give users an actionable next step when a channel has no members.",
-      "problem": "An empty channel state needs an invitation action to guide users toward adding participants.",
-      "role": "Proposed an empty-channel invite action in an open pull request.",
-      "technologies": [
-        "Flutter",
-        "Dart"
-      ]
-    },
-    {
-      "title": "Zedu Desktop PR #73 ? Web SEO metadata",
-      "organization": "Zedu-Vulcan / Zedu Desktop",
-      "category": "Team Contribution ? Web Metadata",
-      "status": "Open pull request ? not merged as of this audit",
-      "summary": "Proposes canonical and robots metadata, Open Graph and Twitter card metadata, and updates to the page title, application display name, and web manifest.",
-      "url": "https://github.com/zedu-vulcan/zedu-desktop/pull/73",
-      "purpose": "Improve browser-facing metadata for search and social sharing.",
-      "problem": "Web pages need canonical, indexing, and social preview metadata for consistent discovery and sharing.",
-      "role": "Proposed web SEO metadata updates in an open pull request.",
-      "technologies": [
-        "HTML",
-        "Web metadata",
-        "Web manifest"
-      ]
-    }
-  ],
-  "skills": [
-    {
-      "category": "Frontend Development",
-      "basis": "Used in independent and collaborative project work",
-      "items": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "React",
-        "Vite",
-        "Responsive web design",
-        "Tailwind CSS"
-      ]
-    },
-    {
-      "category": "Backend & APIs",
-      "basis": "Used in project work or listed as a current learning area",
-      "items": [
-        "Python",
-        "FastAPI",
-        "REST APIs",
-        "API integration",
-        "Node.js and Express ? learning areas"
-      ]
-    },
-    {
-      "category": "Databases & Data",
-      "basis": "Project use, exploration, and learning interests",
-      "items": [
-        "SQLite ? project use",
-        "PostgreSQL ? exploration",
-        "Neon, Supabase, SQL fundamentals ? learning areas"
-      ]
-    },
-    {
-      "category": "Tools & Platforms",
-      "basis": "Used in project work, collaboration, or technical workflows",
-      "items": [
-        "Git and GitHub",
-        "VS Code",
-        "Postman",
-        "Figma",
-        "Vercel",
-        "Render"
-      ]
-    },
-    {
-      "category": "Technical Foundations",
-      "basis": "Learning interests; not presented as professional specialization",
-      "items": [
-        "Cybersecurity fundamentals",
-        "Blockchain concepts",
-        "Artificial intelligence concepts"
-      ]
-    }
-  ],
-  "professionalDevelopment": [
-    {
-      "name": "Introduction to Python",
-      "provider": "SoloLearn",
-      "year": "Not provided"
-    },
-    {
-      "name": "Introduction to HTML",
-      "provider": "SoloLearn",
-      "year": "Not provided"
-    },
-    {
-      "name": "Responsive Web Design",
-      "provider": "freeCodeCamp",
-      "year": "Not provided"
-    },
-    {
-      "name": "Google Crash Course on Python",
-      "provider": "Coursera",
-      "year": "Not provided"
-    },
-    {
-      "name": "Cybersecurity Operations",
-      "provider": "Alison",
-      "year": "Not provided"
-    },
-    {
-      "name": "Blockchain Technology",
-      "provider": "Coursera",
-      "year": "Not provided"
-    }
-  ],
-  "notes": {
-    "developmentRecords": "Technical course titles were supplied by the owner; certificate files and completion records were not available in the project. They are presented as learning, not verified certifications.",
-    "portfolioUrl": "No deployed portfolio URL was documented in the workspace; provide the public URL to add it to the PDF.",
-    "projectVerification": "Descriptions are based on supplied public repositories, deployment responses, source files, repository authorship/branch records, and linked pull requests. Deployed feature workflows were not exercised end-to-end."
-  },
-  "additionalProjects": [
-    {
-      "title": "Basic Calculator",
-      "category": "Frontend Development",
-      "summary": "An interactive browser calculator for basic arithmetic, with keyboard controls, live input, clear/reset behavior, and responsive layout.",
-      "ownership": "Individual frontend project ? repository README credits Godscovenant Patrick Udofe.",
-      "technologies": [
-        "HTML5",
-        "CSS3",
-        "Vanilla JavaScript"
-      ],
-      "implemented": [
-        "Addition, subtraction, multiplication, and division.",
-        "Keyboard support for numbers, operators, Enter, Backspace, and Escape.",
-        "Clear/reset and real-time input display."
-      ],
-      "links": [
-        {
-          "label": "View Live Project",
-          "url": "https://covenantudofe-creator.github.io/codealpha_tasks/"
-        },
-        {
-          "label": "GitHub Repository",
-          "url": "https://github.com/covenantudofe-creator/codealpha_tasks"
-        }
-      ],
-      "problem": "Users need a lightweight browser tool for basic arithmetic.",
-      "catalogueGroup": "Independent Frontend Projects",
-      "purpose": "An interactive browser calculator for basic arithmetic, with keyboard controls, live input, clear/reset behavior, and responsive layout.",
-      "role": "Independently developed frontend project; see the linked repository for the documented implementation."
-    },
-    {
-      "title": "Image Gallery",
-      "category": "Frontend Development",
-      "summary": "A responsive gallery for browsing a collection of images, opening previews, and navigating between images.",
-      "ownership": "Individual frontend project ? repository README credits Godscovenant Patrick Udofe.",
-      "technologies": [
-        "HTML5",
-        "CSS3",
-        "JavaScript ES6"
-      ],
-      "implemented": [
-        "Responsive image grid with category groupings.",
-        "Image preview and next/previous navigation for expanded viewing."
-      ],
-      "links": [
-        {
-          "label": "View Live Project",
-          "url": "https://covenantudofe-creator.github.io/codealpha_task1/"
-        },
-        {
-          "label": "GitHub Repository",
-          "url": "https://github.com/covenantudofe-creator/codealpha_task1"
-        }
-      ],
-      "problem": "Visitors need to browse images, filter categories, and inspect images without leaving the gallery.",
-      "catalogueGroup": "Independent Frontend Projects",
-      "purpose": "A responsive gallery for browsing a collection of images, opening previews, and navigating between images.",
-      "role": "Independently developed frontend project; see the linked repository for the documented implementation."
-    },
-    {
-      "title": "Todo Card Stage 1a",
-      "category": "Frontend Development",
-      "summary": "A single-card task manager demonstrating accessible editing, task status, priority, due-date countdowns, and expandable descriptions.",
-      "ownership": "Individual frontend project ? public repository and live demo supplied by owner.",
-      "technologies": [
-        "HTML",
-        "CSS",
-        "Vanilla JavaScript"
-      ],
-      "implemented": [
-        "Edit title, description, priority, and due date; save or cancel changes.",
-        "Synchronize pending, in-progress, and done states across the checkbox, select, and visible status.",
-        "Expand/collapse details accessibly and update a due-date countdown.",
-        "Single-card demo; the README notes it has no backend or persistence across refreshes."
-      ],
-      "links": [
-        {
-          "label": "View Live Project",
-          "url": "https://covenantudofe-creator.github.io/todo-card/"
-        },
-        {
-          "label": "GitHub Repository",
-          "url": "https://github.com/covenantudofe-creator/todo-card"
-        }
-      ],
-      "problem": "A compact task card needs editable task details, visible status and priority, and a due-date indicator.",
-      "catalogueGroup": "Independent Frontend Projects",
-      "purpose": "A single-card task manager demonstrating accessible editing, task status, priority, due-date countdowns, and expandable descriptions.",
-      "role": "Independently developed frontend project; see the linked repository for the documented implementation."
-    }
-  ]
+﻿{
+    "name":  "Godscovenant Patrick Udofe",
+    "titles":  [
+                   "Technical Writer",
+                   "Software Developer",
+                   "Technical Content Specialist"
+               ],
+    "location":  "Nigeria",
+    "downloadPath":  "/documents/Godscovenant_Patrick_Udofe_Resume.pdf",
+    "portfolioUrl":  "https://my-portfolio-nine-beta-94.vercel.app/",
+    "intro":  "I combine technical writing with hands-on software development. I build responsive interfaces and API-backed applications, read and interpret source code, and turn technical behavior into clear guides for developers and business readers. My independent samples cover B2B technology explainers, API documentation, developer tutorials, and software documentation.",
+    "summary":  "Technical writer and software developer with independent B2B technology articles, practical documentation samples, and project experience across React interfaces, Python/FastAPI services, REST APIs, and database-backed workflows. Comfortable tracing a feature from its user-facing behavior through API requests and data handling, then explaining the relevant setup, behavior, and limitations clearly. Continues to build experience through independent work, team projects, and technical learning.",
+    "experience":  [
+                       {
+                           "organization":  "Independent Technical Writing",
+                           "role":  "Technical Writer | B2B Technology Articles and Documentation Samples",
+                           "period":  "Independent portfolio work; dates not specified",
+                           "summary":  "Writes independent explainers and practical documentation samples alongside software development projects. The work is self-directed and is not presented as commissioned client work.",
+                           "highlights":  [
+                                              "Authored six portfolio articles covering SaaS, cloud computing, APIs, cybersecurity, artificial intelligence, and blockchain.",
+                                              "Prepared an illustrative REST API reference, developer tutorials, and software documentation examples for this portfolio.",
+                                              "Uses source material, structured explanations, examples, and explicit scope notes to make technical topics understandable without overstating implementation."
+                                          ]
+                       },
+                       {
+                           "organization":  "Independent Software Projects",
+                           "role":  "Software Developer",
+                           "period":  "Independent projects; dates not specified",
+                           "summary":  "Builds and maintains browser-based products and full-stack application prototypes, with project scope and status documented in the portfolio catalogue.",
+                           "highlights":  [
+                                              "Develops independent frontend and full-stack projects using React, JavaScript, Python, and FastAPI.",
+                                              "Builds database-backed task and commerce workflows in independent and collaborative projects.",
+                                              "Maintains this React and Vite portfolio with technical articles, project information, and contact functionality."
+                                          ]
+                       },
+                       {
+                           "organization":  "HNG Internship 15 â€” Team Zedu-Puffin",
+                           "role":  "Backend / Full-Stack Development Intern",
+                           "period":  "Dates not specified",
+                           "summary":  "Contributed within a team to a task-manager project connecting a React and Vite frontend to a Python and FastAPI backend.",
+                           "highlights":  [
+                                              "Contributed within a team project with task creation, retrieval, updating, deletion, and task-status workflows.",
+                                              "Worked on a product whose documentation describes a React/Vite frontend, a Python/FastAPI REST API, and SQLite persistence.",
+                                              "The repository describes the overall team product and does not attribute individual feature ownership to specific contributors."
+                                          ]
+                       },
+                       {
+                           "organization":  "TS Academy",
+                           "role":  "Student Moderator â€” Frontend Development Programme",
+                           "period":  "Dates not specified",
+                           "summary":  "Supported learners participating in a frontend development programme.",
+                           "highlights":  [
+                                              "Helped students set up development environments and use VS Code, CodePen, and GitHub workflows.",
+                                              "Provided peer guidance as members worked through frontend learning activities."
+                                          ]
+                       }
+                   ],
+    "education":  [
+                      {
+                          "qualification":  "B.A. Philosophy",
+                          "institution":  "University of Uyo",
+                          "period":  "2021â€“2025"
+                      }
+                  ],
+    "projects":  [
+                     {
+                         "catalogueGroup":  "Independently Built Products",
+                         "title":  "Noir Scents",
+                         "category":  "Full-Stack E-commerce Application",
+                         "image":  "/images/noir-scents.jpg",
+                         "summary":  "A full-stack perfume storefront for browsing products, maintaining inventory, creating orders, and completing online payment. Its React storefront communicates with a FastAPI service backed by PostgreSQL.",
+                         "purpose":  "Bring product discovery, stock control, customer checkout, and order administration into one e-commerce application.",
+                         "role":  "Independently developed and maintained in the ownerâ€™s public GitHub repository.",
+                         "ownership":  "Independent project â€” owner-maintained repository",
+                         "status":  "Live frontend and backend health checks respond.",
+                         "technologies":  [
+                                              "React",
+                                              "Vite",
+                                              "Python",
+                                              "FastAPI",
+                                              "PostgreSQL",
+                                              "SQLAlchemy",
+                                              "Google Identity Services",
+                                              "JWT sessions",
+                                              "Paystack API",
+                                              "Mailgun"
+                                          ],
+                         "implemented":  [
+                                             "Product catalogue and inventory management; order creation and management through the API.",
+                                             "Paystack payment initialization and server-side transaction verification. Creating an order reserves stock; failed or abandoned Paystack payments restore the reserved stock.",
+                                             "Google sign-in backed by server-side identity-token verification and a seven-day application session.",
+                                             "Mailgun welcome messages and order confirmations after verified payment; delivery depends on valid server-side Mailgun configuration."
+                                         ],
+                         "notes":  [
+                                       "Customer account, checkout, Paystack transaction, stock restoration, and email flows were not end-to-end tested in the deployed environment.",
+                                       "Paystack is the only online provider documented as implemented. Flutterwave and OPay are pending integrations; bank transfer is pending/manual. Do not present them as operational payment methods."
+                                   ],
+                         "links":  [
+                                       {
+                                           "label":  "View Live Project",
+                                           "url":  "https://noir-scents-chi.vercel.app/"
+                                       },
+                                       {
+                                           "label":  "GitHub Repository",
+                                           "url":  "https://github.com/covenantudofe-creator/Noir_scents"
+                                       },
+                                       {
+                                           "label":  "Backend Health",
+                                           "url":  "https://noir-scents-1.onrender.com/health"
+                                       }
+                                   ],
+                         "problem":  "A single storefront and service are needed to connect product browsing, stock tracking, customer orders, and online payment."
+                     },
+                     {
+                         "catalogueGroup":  "Independently Built Products",
+                         "title":  "Coveilla Scents",
+                         "category":  "Fragrance Commerce Application",
+                         "summary":  "A fragrance storefront described as a React frontend connected to a Python/FastAPI service and a PostgreSQL database hosted on Neon. Product management is part of the supplied project scope; detailed implementation status has not been reviewed against a source repository.",
+                         "purpose":  "Present fragrance products to customers and support a database-backed product management workflow.",
+                         "role":  "Project owner. The technology stack and product management scope are based on the supplied project description; repository and deployment links were not included in the portfolio data.",
+                         "ownership":  "Owner-described project; source and deployment links not supplied.",
+                         "status":  "Scope described; implementation details not independently verified.",
+                         "technologies":  [
+                                              "React",
+                                              "Python",
+                                              "FastAPI",
+                                              "PostgreSQL",
+                                              "Neon"
+                                          ],
+                         "implemented":  [
+
+                                         ],
+                         "notes":  [
+                                       "Review the source and add live/repository links before describing specific completed product-management features."
+                                   ],
+                         "links":  [
+
+                                   ]
+                     },
+                     {
+                         "catalogueGroup":  "Independently Built Products",
+                         "title":  "Coveilla Blog",
+                         "category":  "Full-Stack Blogging and Content Platform",
+                         "image":  "/images/coveilla-blog.jpg",
+                         "summary":  "A reader and administrator platform for browsing and publishing articles, with account access, contact messaging, and newsletter subscriptions.",
+                         "purpose":  "Give readers access to blog content while providing protected workflows for article management, contact submissions, and newsletter subscriptions.",
+                         "role":  "Independently built repository; package metadata names Godscovenant Patrick Udofe as author.",
+                         "ownership":  "Independent project â€” repository author verified in package metadata",
+                         "status":  "Live frontend; sign-in screen shown during review.",
+                         "technologies":  [
+                                              "React 19",
+                                              "Vite",
+                                              "React Router",
+                                              "Three.js",
+                                              "Node.js",
+                                              "Express 5",
+                                              "Sequelize",
+                                              "Neon PostgreSQL",
+                                              "JWT",
+                                              "Google authentication",
+                                              "bcryptjs"
+                                          ],
+                         "implemented":  [
+                                             "Reader registration and sign-in with password and Google authentication; administrator sign-in is separate and role-protected.",
+                                             "Article list and individual article retrieval; administrator-only create, edit, and delete routes.",
+                                             "Contact submissions are stored and sent through the configured email utility; administrators can review and delete stored messages.",
+                                             "Newsletter subscription, welcome/owner notifications, password-reset messaging, and login notifications are implemented in the repository. Actual delivery depends on deployment email and API configuration."
+                                         ],
+                         "notes":  [
+                                       "The README does not identify a deployed backend API URL. Production reader/admin, database, publishing, and email flows could not be verified in the deployed environment."
+                                   ],
+                         "links":  [
+                                       {
+                                           "label":  "View Live Project",
+                                           "url":  "https://coveillablog.vercel.app/"
+                                       },
+                                       {
+                                           "label":  "GitHub Repository",
+                                           "url":  "https://github.com/covenantudofe-creator/Coveillablog"
+                                       }
+                                   ],
+                         "problem":  "Readers need a place to access articles while administrators need protected tools to manage content and submissions."
+                     },
+                     {
+                         "catalogueGroup":  "Independently Built Products",
+                         "title":  "Ziki Redesign",
+                         "image":  "/images/ziki-redesign-desktop.png",
+                         "category":  "Human-Controlled Collaborative Workspace Prototype",
+                         "summary":  "A browser-based collaboration workspace that helps contributors explore issue opportunities, shape reviewable plans, and keep approval decisions with a person. The seven-agent crew and workflow are local simulations rather than connected AI or repository services.",
+                         "purpose":  "Demonstrate a human-controlled multi-agent work process with explicit planning, permissions, review, revision, and approval stages.",
+                         "role":  "Built the frontend prototype and its local workflow simulation in the public repository under Godscovenant Udofe’s account.",
+                         "ownership":  "Independent frontend prototype â€” personal public repository",
+                         "status":  "Live interactive frontend prototype; local simulations.",
+                         "technologies":  [
+                                              "HTML",
+                                              "CSS",
+                                              "Vanilla JavaScript ES modules",
+                                              "Browser localStorage",
+                                              "Vercel"
+                                          ],
+                         "implemented":  [
+                                             "Seven specialist robot personas, task creation and queues, agent conversations, and local draft preparation.",
+                                             "Illustrative issue recommendations, plan details, scope, assumptions, risks, dependencies, time estimates, and requested permissions.",
+                                             "Human review actions: approve a displayed plan, reject it, or request a revision; simulated work status and activity history persist in browser localStorage.",
+                                             "Responsive workspace navigation and reduced-motion handling."
+                                         ],
+                         "notes":  [
+                                       "Issue examples and agent responses are local demo fixtures/templates. The deployment does not document a specific prior interface problem addressed by the redesign.",
+                                       "This project is separate from the ownerâ€™s Ziki PR #624, which adds automated end-to-end tests to the existing Ziki product."
+                                   ],
+                         "links":  [
+                                       {
+                                           "label":  "View Live Project",
+                                           "url":  "https://ziki-redesign-pearl.vercel.app/"
+                                       },
+                                       {
+                                           "label":  "GitHub Repository",
+                                           "url":  "https://github.com/covenantudofe-creator/ziki-redesign"
+                                       },
+                                       {
+                                           "label":  "Public App Source Module",
+                                           "url":  "https://ziki-redesign-pearl.vercel.app/src/app.js"
+                                       }
+                                   ],
+                         "problem":  "Demonstrates how a contributor workspace could organize opportunities, plans, permissions, and human review. The source does not document a specific prior interface problem."
+                     },
+                     {
+                         "catalogueGroup":  "Team and Internship Projects",
+                         "title":  "HNG Stage 1 Task Manager",
+                         "category":  "Full-Stack Team Project",
+                         "summary":  "A team-built task manager from HNG Internship 15, developed by HNG Tech â€” Team Zedu-Puffin, with a React/Vite interface and a Python/FastAPI REST API backed by SQLite.",
+                         "purpose":  "Help users organize dated tasks and follow their progress through a calendar and task list.",
+                         "role":  "Team contributor. The repository documents the overall project but does not attribute individual feature ownership to specific contributors.",
+                         "ownership":  "HNG Internship 15 â€” team project â€” Team Zedu-Puffin",
+                         "status":  "Team project; frontend and API documentation are reachable.",
+                         "technologies":  [
+                                              "React",
+                                              "Vite",
+                                              "Python",
+                                              "FastAPI",
+                                              "REST API",
+                                              "SQLite",
+                                              "PostgreSQL exploration"
+                                          ],
+                         "implemented":  [
+                                             "Create, retrieve, edit, delete, and complete tasks with descriptions, dates, and in-progress/completed statuses.",
+                                             "Monthly calendar and task timeline with progress indicators.",
+                                             "Persistent task records stored in SQLite; the project brief documents PostgreSQL exploration."
+                                         ],
+                         "notes":  [
+                                       "The backend root and /health returned 404 during the check, while /docs and /openapi.json returned 200. Individual task API workflows were not end-to-end tested.",
+                                       "The README describes team-wide functionality and does not attribute individual endpoint or UI ownership to specific contributors."
+                                   ],
+                         "links":  [
+                                       {
+                                           "label":  "View Live Frontend",
+                                           "url":  "https://hng-stage1-task-nu.vercel.app/"
+                                       },
+                                       {
+                                           "label":  "API Documentation",
+                                           "url":  "https://hngstage1-task.onrender.com/docs"
+                                       },
+                                       {
+                                           "label":  "Project Docs (Portfolio Sample)",
+                                           "url":  "/projects/task-manager-docs"
+                                       },
+                                       {
+                                           "label":  "GitHub Repository",
+                                           "url":  "https://github.com/covenantudofe-creator/HngStage1_task"
+                                       }
+                                   ],
+                         "problem":  "Users need a way to organize dated tasks and follow progress across a calendar and task list."
+                     },
+                     {
+                         "catalogueGroup":  "Team and Internship Projects",
+                         "title":  "Start.ng â€” Whimsical Creator Companion",
+                         "category":  "Team Product Contribution â€” Frontend Interaction",
+                         "summary":  "A contribution to start.ng, a community platform for discovering and playing free browser games, publishing community-created games, and visiting games at individual addresses. The live site identifies itself as built by the HNG community.",
+                         "purpose":  "Add a friendly creator-focused interaction to a larger browser-gaming platform and invite visitors to submit a game.",
+                         "role":  "Implemented the creator robot companion and lamp-and-flower profile interaction in a task-specific source branch. The robot has idle reactions and a prompt with a â€œCreate a gameâ€ action; commits also add the companion to public homepage visitors.",
+                         "ownership":  "Team contribution â€” platform identifies as an HNG community product; task-specific commits are in the ownerâ€™s public branch.",
+                         "status":  "Live HNG community platform; contribution verified in source branch.",
+                         "technologies":  [
+                                              "React 18",
+                                              "TypeScript",
+                                              "Vite",
+                                              "CSS",
+                                              "Google OAuth integration"
+                                          ],
+                         "implemented":  [
+                                             "Whimsical SVG robot companion with idle animation, pointer-aware gaze, introductory prompt, and a create-game action.",
+                                             "Lamp-and-flower profile interaction and creator-page behavior.",
+                                             "The wider platform supports game discovery, browser play, game submission, and community features; those platform-wide capabilities are not presented as the ownerâ€™s individual work."
+                                         ],
+                         "links":  [
+                                       {
+                                           "label":  "View Live Project",
+                                           "url":  "https://whimsical-design-startng.vercel.app/"
+                                       },
+                                       {
+                                           "label":  "GitHub Source Repository",
+                                           "url":  "https://github.com/covenantudofe-creator/start-ng-whimsical-design/tree/feat/hng15-lamp-delight"
+                                       },
+                                       {
+                                           "label":  "Robot Companion Commit",
+                                           "url":  "https://github.com/covenantudofe-creator/start-ng-whimsical-design/commit/0d3455167a02bba9161b931e55431777366e742e"
+                                       },
+                                       {
+                                           "label":  "Homepage Companion Commit",
+                                           "url":  "https://github.com/covenantudofe-creator/start-ng-whimsical-design/commit/11447be3a408b3cf2245c6d1954a4c6e92592394"
+                                       }
+                                   ],
+                         "problem":  "A large gaming community platform benefits from a welcoming creator interaction that helps visitors discover how to submit a game."
+                     },
+                     {
+                         "catalogueGroup":  "Team and Internship Projects",
+                         "title":  "Zedu Desktop",
+                         "category":  "Team Software Project â€” Flutter Desktop Application",
+                         "summary":  "A team-developed Flutter application organized with Clean Architecture. Its documented reference vertical slice covers authentication, session state, and API wiring, with desktop and mobile targets.",
+                         "purpose":  "Provide a cross-platform team communication application with shared infrastructure and an authentication/session flow.",
+                         "role":  "Team repository contributor. My verified code changes are listed separately under Open-Source Contributions; the broader application is not represented as independent work.",
+                         "ownership":  "Team project â€” repository forked from the Zedu project",
+                         "status":  "Team repository available; no separate live application deployment was verified.",
+                         "technologies":  [
+                                              "Flutter",
+                                              "Dart",
+                                              "Clean Architecture",
+                                              "Material 3",
+                                              "Riverpod",
+                                              "GetIt",
+                                              "GoRouter",
+                                              "Dio",
+                                              "Secure Storage",
+                                              "Mocktail"
+                                          ],
+                         "implemented":  [
+                                             "Repository structure separates presentation, domain, and data layers.",
+                                             "Authentication/session reference flow uses Riverpod, repository abstractions, remote API access, and secure storage.",
+                                             "Repository includes unit and widget tests and documents Windows desktop MSIX packaging."
+                                         ],
+                         "notes":  [
+                                       "These are repository-level capabilities. They are not claims that the portfolio owner authored the entire application."
+                                   ],
+                         "links":  [
+                                       {
+                                           "label":  "Team GitHub Repository",
+                                           "url":  "https://github.com/zedu-vulcan/zedu-desktop"
+                                       },
+                                       {
+                                           "label":  "Owner Fork",
+                                           "url":  "https://github.com/covenantudofe-creator/zedu-desktop"
+                                       }
+                                   ],
+                         "problem":  "The team project addresses cross-platform communication and account/session workflows; the repository-level scope is distinct from the ownerâ€™s individual pull requests."
+                     },
+                     {
+                         "catalogueGroup":  "Portfolio Projects",
+                         "title":  "Portfolio Website",
+                         "category":  "Personal Portfolio â€” React Web Application",
+                         "summary":  "A responsive technical portfolio featuring software projects, engineering contributions, technical articles, and contact information.",
+                         "purpose":  "Present verified software projects, technical learning, contributions, and articles in a single professional portfolio.",
+                         "role":  "Built and maintain this portfolio website.",
+                         "ownership":  "Personal project",
+                         "status":  "Current portfolio project",
+                         "technologies":  [
+                                              "React",
+                                              "Vite",
+                                              "JavaScript",
+                                              "Tailwind CSS v4",
+                                              "React Router",
+                                              "CSS"
+                                          ],
+                         "implemented":  [
+                                             "Six long-form B2B technology articles with original SVG technical diagrams.",
+                                             "Responsive layouts, category filters, search, article routes, and project detail cards.",
+                                             "Rule-based portfolio assistant with curated answers; it does not use a live generative AI service.",
+                                             "Contact form validates input and opens a prefilled mailto draft; the website does not send messages directly.",
+                                             "Resume page and downloadable PDF."
+                                         ],
+                         "links":  [
+                                       {
+                                           "label":  "Open this portfolio",
+                                           "url":  "/"
+                                       },
+                                       {
+                                           "label":  "RÃ©sumÃ© page",
+                                           "url":  "/resume"
+                                       }
+                                   ],
+                         "problem":  "Technical project work, contributions, and articles need a responsive public portfolio with clear project details and contact paths."
+                     }
+                 ],
+    "contributions":  [
+                          {
+                              "title":  "Ziki PR #624 â€” Marketing lifecycle Playwright coverage",
+                              "organization":  "Emerjent / Ziki",
+                              "category":  "Open-Source Contribution â€” Automated End-to-End Testing",
+                              "status":  "Open pull request â€” not merged as of this audit",
+                              "summary":  "Added browser-level Playwright coverage for proposing a Marketing task with rationale and type, reaching three positive verdicts, creating an issue, bidding and awarding work, accepting the offer, delivering content without a pull request, reviewing and publishing it, and checking persisted participant points and idempotency.",
+                              "url":  "https://github.com/emerjent/ziki/pull/624",
+                              "notes":  [
+                                            "The PR says its end-to-end test was not run locally and expects CI to run the project checks. This is a test contribution to the existing Ziki product, separate from Ziki Redesign."
+                                        ],
+                              "purpose":  "Add browser-level regression coverage for the Ziki marketing task lifecycle.",
+                              "problem":  "The multi-step marketing task lifecycle needs automated coverage across proposal, issue creation, bidding, delivery, review, publication, and points persistence.",
+                              "role":  "Authored the Playwright end-to-end test in an open pull request; it is not represented as merged.",
+                              "technologies":  [
+                                                   "Playwright"
+                                               ]
+                          },
+                          {
+                              "title":  "Zedu Desktop PR #27 â€” Profile settings crash fix",
+                              "organization":  "Zedu-Vulcan / Zedu Desktop",
+                              "category":  "Team Contribution â€” Flutter Bug Fix",
+                              "status":  "Merged â€” October 18, 2026",
+                              "summary":  "Fix for a profile-settings provider crash on desktop.",
+                              "url":  "https://github.com/zedu-vulcan/zedu-desktop/pull/27",
+                              "purpose":  "Prevent a profile-settings provider crash on desktop.",
+                              "problem":  "The reported profile-settings provider failure could crash the desktop application.",
+                              "role":  "Submitted the fix in a merged team-repository pull request.",
+                              "technologies":  [
+                                                   "Flutter",
+                                                   "Dart"
+                                               ]
+                          },
+                          {
+                              "title":  "Zedu Desktop PR #71 â€” Empty-channel invite action",
+                              "organization":  "Zedu-Vulcan / Zedu Desktop",
+                              "category":  "Team Contribution â€” Flutter UI",
+                              "status":  "Open pull request â€” not merged as of this audit",
+                              "summary":  "Proposes an actionable invite call-to-action for the empty-channel state. The change remains an open proposal.",
+                              "url":  "https://github.com/zedu-vulcan/zedu-desktop/pull/71",
+                              "purpose":  "Give users an actionable next step when a channel has no members.",
+                              "problem":  "An empty channel state needs an invitation action to guide users toward adding participants.",
+                              "role":  "Proposed an empty-channel invite action in an open pull request.",
+                              "technologies":  [
+                                                   "Flutter",
+                                                   "Dart"
+                                               ]
+                          },
+                          {
+                              "title":  "Zedu Desktop PR #73 â€” Web SEO metadata",
+                              "organization":  "Zedu-Vulcan / Zedu Desktop",
+                              "category":  "Team Contribution â€” Web Metadata",
+                              "status":  "Open pull request â€” not merged as of this audit",
+                              "summary":  "Proposes canonical and robots metadata, Open Graph and Twitter card metadata, and updates to the page title, application display name, and web manifest.",
+                              "url":  "https://github.com/zedu-vulcan/zedu-desktop/pull/73",
+                              "purpose":  "Improve browser-facing metadata for search and social sharing.",
+                              "problem":  "Web pages need canonical, indexing, and social preview metadata for consistent discovery and sharing.",
+                              "role":  "Proposed web SEO metadata updates in an open pull request.",
+                              "technologies":  [
+                                                   "HTML",
+                                                   "Web metadata",
+                                                   "Web manifest"
+                                               ]
+                          }
+                      ],
+    "skills":  [
+                   {
+                       "category":  "Programming",
+                       "basis":  "Used in independent and collaborative project work",
+                       "items":  [
+                                     "Python",
+                                     "JavaScript",
+                                     "HTML5",
+                                     "CSS3"
+                                 ]
+                   },
+                   {
+                       "category":  "Frameworks and Libraries",
+                       "basis":  "Project experience documented in the portfolio catalogue",
+                       "items":  [
+                                     "React",
+                                     "Vite",
+                                     "FastAPI",
+                                     "Node.js",
+                                     "Express.js"
+                                 ]
+                   },
+                   {
+                       "category":  "Backend and APIs",
+                       "basis":  "Used in independent and team project work",
+                       "items":  [
+                                     "REST APIs",
+                                     "API integration",
+                                     "CRUD workflows",
+                                     "Postman"
+                                 ]
+                   },
+                   {
+                       "category":  "Databases",
+                       "basis":  "Project use documented in independent and team projects",
+                       "items":  [
+                                     "SQLite",
+                                     "PostgreSQL",
+                                     "Neon"
+                                 ]
+                   },
+                   {
+                       "category":  "Developer Tools",
+                       "basis":  "Used across project development and deployment workflows",
+                       "items":  [
+                                     "Git",
+                                     "GitHub",
+                                     "VS Code",
+                                     "Vercel",
+                                     "Render"
+                                 ]
+                   },
+                   {
+                       "category":  "Technical Communication",
+                       "basis":  "Independent portfolio articles and documentation samples",
+                       "items":  [
+                                     "B2B technology writing",
+                                     "API documentation samples",
+                                     "Developer tutorials",
+                                     "Software documentation",
+                                     "README writing",
+                                     "Technical research",
+                                     "Proofreading and editing"
+                                 ]
+                   },
+                   {
+                       "category":  "Technical Foundations",
+                       "basis":  "Learning interests; not presented as professional specialization",
+                       "items":  [
+                                     "Cybersecurity fundamentals",
+                                     "Blockchain concepts",
+                                     "Artificial intelligence concepts"
+                                 ]
+                   }
+               ],
+    "professionalDevelopment":  [
+                                    {
+                                        "name":  "Introduction to Python",
+                                        "provider":  "SoloLearn",
+                                        "year":  "Not provided"
+                                    },
+                                    {
+                                        "name":  "Introduction to HTML",
+                                        "provider":  "SoloLearn",
+                                        "year":  "Not provided"
+                                    },
+                                    {
+                                        "name":  "Responsive Web Design",
+                                        "provider":  "freeCodeCamp",
+                                        "year":  "Not provided"
+                                    },
+                                    {
+                                        "name":  "Google Crash Course on Python",
+                                        "provider":  "Coursera",
+                                        "year":  "Not provided"
+                                    },
+                                    {
+                                        "name":  "Cybersecurity Operations",
+                                        "provider":  "Alison",
+                                        "year":  "Not provided"
+                                    },
+                                    {
+                                        "name":  "Blockchain Technology",
+                                        "provider":  "Coursera",
+                                        "year":  "Not provided"
+                                    },
+                                    {
+                                        "name":  "AI Agents for Beginners: How They Work (Python)",
+                                        "provider":  "SoloLearn",
+                                        "year":  "2026"
+                                    }
+                                ],
+    "notes":  {
+                  "developmentRecords":  "Coursework is listed as learning where a matching credential is not shown. Verified certificates are listed separately.",
+                  "portfolioUrl":  "https://my-portfolio-nine-beta-94.vercel.app/",
+                  "projectVerification":  "Descriptions are based on supplied public repositories, deployment responses, source files, repository authorship/branch records, and linked pull requests. Deployed feature workflows were not exercised end-to-end."
+              },
+    "additionalProjects":  [
+                               {
+                                   "title":  "Basic Calculator",
+                                   "category":  "Frontend Development",
+                                   "summary":  "An interactive browser calculator for basic arithmetic, with keyboard controls, live input, clear/reset behavior, and responsive layout.",
+                                   "ownership":  "Individual frontend project â€” repository README credits Godscovenant Patrick Udofe.",
+                                   "technologies":  [
+                                                        "HTML5",
+                                                        "CSS3",
+                                                        "Vanilla JavaScript"
+                                                    ],
+                                   "implemented":  [
+                                                       "Addition, subtraction, multiplication, and division.",
+                                                       "Keyboard support for numbers, operators, Enter, Backspace, and Escape.",
+                                                       "Clear/reset and real-time input display."
+                                                   ],
+                                   "links":  [
+                                                 {
+                                                     "label":  "View Live Project",
+                                                     "url":  "https://covenantudofe-creator.github.io/codealpha_tasks/"
+                                                 },
+                                                 {
+                                                     "label":  "GitHub Repository",
+                                                     "url":  "https://github.com/covenantudofe-creator/codealpha_tasks"
+                                                 }
+                                             ],
+                                   "problem":  "Users need a lightweight browser tool for basic arithmetic.",
+                                   "catalogueGroup":  "Independent Frontend Projects",
+                                   "purpose":  "An interactive browser calculator for basic arithmetic, with keyboard controls, live input, clear/reset behavior, and responsive layout.",
+                                   "role":  "Independently developed frontend project; see the linked repository for the documented implementation."
+                               },
+                               {
+                                   "title":  "Image Gallery",
+                                   "category":  "Frontend Development",
+                                   "summary":  "A responsive gallery for browsing a collection of images, opening previews, and navigating between images.",
+                                   "ownership":  "Individual frontend project â€” repository README credits Godscovenant Patrick Udofe.",
+                                   "technologies":  [
+                                                        "HTML5",
+                                                        "CSS3",
+                                                        "JavaScript ES6"
+                                                    ],
+                                   "implemented":  [
+                                                       "Responsive image grid with category groupings.",
+                                                       "Image preview and next/previous navigation for expanded viewing."
+                                                   ],
+                                   "links":  [
+                                                 {
+                                                     "label":  "View Live Project",
+                                                     "url":  "https://covenantudofe-creator.github.io/codealpha_task1/"
+                                                 },
+                                                 {
+                                                     "label":  "GitHub Repository",
+                                                     "url":  "https://github.com/covenantudofe-creator/codealpha_task1"
+                                                 }
+                                             ],
+                                   "problem":  "Visitors need to browse images, filter categories, and inspect images without leaving the gallery.",
+                                   "catalogueGroup":  "Independent Frontend Projects",
+                                   "purpose":  "A responsive gallery for browsing a collection of images, opening previews, and navigating between images.",
+                                   "role":  "Independently developed frontend project; see the linked repository for the documented implementation."
+                               },
+                               {
+                                   "title":  "Todo Card Stage 1a",
+                                   "category":  "Frontend Development",
+                                   "summary":  "A single-card task manager demonstrating accessible editing, task status, priority, due-date countdowns, and expandable descriptions.",
+                                   "ownership":  "Individual frontend project â€” public repository and live demo supplied by owner.",
+                                   "technologies":  [
+                                                        "HTML",
+                                                        "CSS",
+                                                        "Vanilla JavaScript"
+                                                    ],
+                                   "implemented":  [
+                                                       "Edit title, description, priority, and due date; save or cancel changes.",
+                                                       "Synchronize pending, in-progress, and done states across the checkbox, select, and visible status.",
+                                                       "Expand/collapse details accessibly and update a due-date countdown.",
+                                                       "Single-card demo; the README notes it has no backend or persistence across refreshes."
+                                                   ],
+                                   "links":  [
+                                                 {
+                                                     "label":  "View Live Project",
+                                                     "url":  "https://covenantudofe-creator.github.io/todo-card/"
+                                                 },
+                                                 {
+                                                     "label":  "GitHub Repository",
+                                                     "url":  "https://github.com/covenantudofe-creator/todo-card"
+                                                 }
+                                             ],
+                                   "problem":  "A compact task card needs editable task details, visible status and priority, and a due-date indicator.",
+                                   "catalogueGroup":  "Independent Frontend Projects",
+                                   "purpose":  "A single-card task manager demonstrating accessible editing, task status, priority, due-date countdowns, and expandable descriptions.",
+                                   "role":  "Independently developed frontend project; see the linked repository for the documented implementation."
+                               }
+                           ]
 }

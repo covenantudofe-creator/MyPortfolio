@@ -178,3 +178,72 @@ html[data-theme="dark"] .resume-project-section{background:var(--paper2)}html[da
 .certification-download{grid-column:2/-1;display:inline-flex;align-items:center;gap:6px;width:max-content;color:var(--wine);font-size:10px;font-weight:700;text-decoration:underline;text-underline-offset:3px}
 .certification-card-compact{border-left:2px solid var(--wine)}
 @media(max-width:640px){.home-certification{padding-block:28px 38px}.home-certification-list{grid-template-columns:minmax(0,1fr)}.certification-card{grid-template-columns:38px minmax(0,1fr);align-items:start;gap:12px;padding:17px}.certification-mark{width:36px;height:36px}.certification-copy h3{font-size:19px}.certification-details{flex-direction:column;gap:3px}.certification-preview{grid-column:1/-1;grid-row:auto;width:100%;margin-top:0}.certification-card:not(.certification-card-compact) .certification-actions{grid-column:2;grid-row:auto;gap:8px}.certification-actions .button{min-height:42px;white-space:normal}.certification-note{max-width:none}.certification-download{grid-column:2}}
+
+.home-writing-section{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(230px,.8fr);align-items:center;gap:clamp(28px,6vw,76px);padding-block:56px}
+.home-writing-copy h2{margin:12px 0 13px;font:500 clamp(30px,4vw,43px)/1.2 var(--serif);letter-spacing:-.035em}
+.home-writing-copy h2 em{color:var(--wine);font-weight:500}
+.home-writing-copy>p{max-width:590px;margin:0 0 17px;color:var(--muted);font-size:12px;line-height:1.85}
+.home-writing-index{display:grid;border-top:1px solid var(--line)}
+.home-writing-index span{padding:12px 3px;border-bottom:1px solid var(--line);color:var(--wine);font:500 14px/1.4 var(--serif)}
+.writing-hero{padding-block:68px 35px}
+.writing-hero h1{max-width:760px;margin-block:20px}
+.writing-hero>p{max-width:760px;margin:0;color:var(--muted);font-size:15px;line-height:1.85}
+.writing-section-nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.writing-section-nav a{padding:8px 11px;border:1px solid var(--line);color:var(--wine);font-size:10px;font-weight:600}
+.writing-section-nav a:hover,.writing-section-nav a:focus-visible{background:var(--paper2)}
+.writing-sample-section{padding-block:42px 58px;scroll-margin-top:96px}
+.writing-tutorials-section,.writing-docs-section{max-width:none;background:var(--paper2)}
+.writing-tutorials-section>.container,.writing-docs-section>.container{width:min(1160px,calc(100% - 64px));margin-inline:auto}
+.writing-section-heading{display:flex;align-items:flex-start;gap:16px;margin-bottom:24px}
+.writing-section-icon{display:grid;place-items:center;flex:none;width:42px;height:42px;border:1px solid var(--line);background:var(--card);color:var(--wine)}
+.writing-section-heading .eyebrow{font-size:8px}
+.writing-section-heading h2{margin:5px 0 6px;font:500 clamp(29px,3.5vw,39px)/1.18 var(--serif);letter-spacing:-.025em}
+.writing-section-heading h2 em{color:var(--wine);font-weight:500}
+.writing-section-heading p{max-width:780px;margin:0;color:var(--muted);font-size:11px;line-height:1.8}
+.writing-doc-card{display:grid;grid-template-columns:minmax(0,1fr);gap:25px;padding:clamp(18px,3vw,30px);border:1px solid var(--line);background:var(--card)}
+.writing-doc-card>* ,.writing-doc-overview,.writing-endpoints,.writing-two-col,.writing-facts{min-width:0}
+.writing-doc-card h3,.writing-tutorial-card h3,.writing-explainer-grid h3{margin:0 0 9px;font:500 18px/1.35 var(--serif)}
+.writing-doc-card p,.writing-tutorial-card p,.writing-explainer-grid p{color:var(--muted);font-size:10px;line-height:1.8}
+.writing-doc-card p:first-of-type{margin-top:0}
+.writing-doc-card code,.writing-tutorial-card code,.writing-explainer-grid code{padding:1px 4px;background:var(--paper2);font:500 .9em/1.5 'DM Sans',sans-serif;overflow-wrap:anywhere}
+.writing-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:18px 0 0}
+.writing-facts>div{min-width:0;padding:12px;border-left:2px solid var(--wine);background:var(--paper2)}
+.writing-facts dt{margin-bottom:5px;color:var(--muted);font-size:8px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.writing-facts dd{margin:0;font-size:10px;line-height:1.7;overflow-wrap:anywhere}
+.writing-table-scroll{width:100%;min-width:0;max-width:100%;overflow-x:auto;overscroll-behavior-x:contain}
+.writing-table-scroll table{width:100%;border-collapse:collapse;font-size:10px;line-height:1.65}
+.writing-table-scroll th,.writing-table-scroll td{padding:9px 10px;border:1px solid var(--line);text-align:left;vertical-align:top}
+.writing-table-scroll th{background:var(--paper2);font-size:8px;letter-spacing:.07em;text-transform:uppercase}
+.writing-table-scroll td code{white-space:nowrap}
+.http-method{display:inline-block;padding:2px 5px;background:var(--paper2);color:var(--wine);font-size:8px;font-weight:700}
+.writing-two-col{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.writing-plain-list,.writing-tutorial-card ol{padding-left:18px;margin:7px 0;color:var(--muted);font-size:10px;line-height:1.85}
+.writing-plain-list li+li,.writing-tutorial-card li+li{margin-top:4px}
+.writing-code-sample{min-width:0;margin:12px 0;padding:0;border:1px solid var(--line);background:#282625;color:#f5f1e8}
+.writing-code-sample figcaption{padding:7px 10px;border-bottom:1px solid #ffffff22;color:#e1c7c4;font-size:8px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.writing-code-sample pre{box-sizing:border-box;width:100%;min-width:0;max-width:100%;margin:0;padding:12px;overflow:auto;color:#f5f1e8;font:10px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace;tab-size:2}
+.writing-code-sample code{padding:0!important;background:none!important;color:inherit;font:inherit!important;white-space:pre}
+.writing-tutorial-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.writing-tutorial-card{min-width:0;padding:20px;border:1px solid var(--line);background:var(--card)}
+.writing-tutorial-card>.eyebrow{font-size:8px}
+.writing-tutorial-card h3{margin-top:7px}
+.writing-explainer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.writing-explainer-grid article{min-width:0;padding:19px;border:1px solid var(--line);background:var(--card)}
+.writing-explainer-grid h3{font-size:17px}
+.writing-explainer-grid p{margin-bottom:4px}
+.writing-explainer-grid .text-link{margin-top:10px;font-size:10px}
+.writing-browse-link{display:inline-flex;align-items:center;gap:8px;margin-top:21px;color:var(--wine);font-size:11px;font-weight:700}
+.writing-readme-sample{grid-template-columns:repeat(2,minmax(0,1fr))}
+.writing-final-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:52px}
+.writing-final-cta h2{margin:8px 0 0;font:500 clamp(28px,3.5vw,40px)/1.2 var(--serif)}
+.writing-final-cta h2 em{color:var(--wine);font-weight:500}
+.writing-final-cta>div:last-child{display:flex;flex-wrap:wrap;gap:9px}
+.resume-writing-card{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(250px,.75fr);gap:24px;padding:22px;border:1px solid var(--line);background:var(--card)}
+.resume-writing-card h3{margin:6px 0 8px;font:500 20px/1.3 var(--serif)}
+.resume-writing-card p,.resume-writing-card li{color:var(--muted);font-size:10px;line-height:1.75}
+.resume-writing-card ul{padding-left:17px}
+.resume-writing-links{display:flex;flex-wrap:wrap;gap:14px;margin-top:12px}
+.resume-writing-links a{color:var(--wine);font-size:10px;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+@media(min-width:641px) and (max-width:900px){.portfolio-assistant{position:relative;right:auto;bottom:auto;display:flex;justify-content:flex-end;width:calc(100% - 48px);max-width:1160px;margin:12px auto 0}.assistant-panel{position:fixed;right:24px;bottom:24px;width:min(380px,calc(100vw - 48px))}}
+@media(max-width:900px){.writing-explainer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.writing-facts{grid-template-columns:1fr}.writing-facts>div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:10px}.writing-facts dt{margin:0}}
+@media(max-width:640px){.home-writing-section{grid-template-columns:1fr;gap:22px;padding-block:37px}.writing-hero{padding-block:38px 22px}.writing-hero h1{font-size:clamp(38px,11vw,56px)}.writing-hero>p{font-size:13px}.writing-section-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.writing-section-nav a{height:100%;font-size:9px}.writing-sample-section{padding-block:30px 39px}.writing-tutorials-section>.container,.writing-docs-section>.container{width:calc(100% - 32px)}.writing-section-heading{gap:11px;margin-bottom:18px}.writing-section-icon{width:36px;height:36px}.writing-section-heading .eyebrow{font-size:7px}.writing-section-heading h2{font-size:29px}.writing-section-heading p{font-size:10px}.writing-doc-card{gap:20px;padding:16px}.writing-doc-card h3,.writing-tutorial-card h3{font-size:17px}.writing-facts>div{grid-template-columns:1fr;gap:3px}.writing-two-col,.writing-tutorial-grid,.writing-readme-sample{grid-template-columns:minmax(0,1fr)}.writing-table-scroll table{min-width:600px}.writing-explainer-grid{grid-template-columns:minmax(0,1fr)}.writing-tutorial-card,.writing-explainer-grid article{padding:16px}.writing-final-cta{align-items:flex-start;flex-direction:column;padding-block:38px}.writing-final-cta>div:last-child{width:100%}.writing-final-cta .button{flex:1 1 130px}.resume-writing-card{grid-template-columns:minmax(0,1fr);gap:10px;padding:17px}}

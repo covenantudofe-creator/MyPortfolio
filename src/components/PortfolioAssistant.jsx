@@ -15,7 +15,7 @@ function renderAssistantText(text, role) {
 const initialMessage = {
   role: 'assistant',
   topic: 'welcome',
-  text: 'Hello, I’m the portfolio assistant. Ask me about Godscovenant’s software projects, technical skills, engineering contributions, education, résumé, or contact details.',
+  text: 'Hello, I’m the portfolio assistant. Ask me about Godscovenant’s technical writing samples, software projects, technical skills, engineering contributions, education, résumé, or contact details.',
 };
 
 export default function PortfolioAssistant() {

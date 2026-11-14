@@ -28,6 +28,7 @@ function projectAnswer(question) {
   const allProjects = [...knowledge.projects, ...knowledge.additionalProjects];
   const direct = allProjects.find((project) => normalized.includes(project.title.toLowerCase()));
   const aliases = [
+    [/\bcoveilla scents\b/, 'Coveilla Scents'],
     [/\b(noir|perfume store|noir scents)\b/, 'Noir Scents'],
     [/\bcoveilla\b/, 'Coveilla Blog'],
     [/\bziki redesign\b|\bziki\b|\bcollaborative workspace\b/, 'Ziki Redesign'],
@@ -68,8 +69,9 @@ export function answerPortfolioQuestion(rawQuestion, previousTopic = '') {
   }
   if (/\b(experience|experienced|employment|internship|how long|years?)\b/.test(question)) return makeReply('experience', knowledge.experience, [{ label: 'View résumé', to: '/resume' }]);
   if (/\b(projects?|built|products?|contribut\w*|pull request|pr|ziki|noir|coveilla|zedu|calculator|gallery|todo.card|start.ng|startng|whimsical)\b/.test(question)) return projectAnswer(question);
-  if (/\b(article|articles|technical writing|insights|saas|cloud|api|cybersecurity|blockchain|artificial intelligence)\b/.test(question)) {
-    return makeReply('articles', 'The portfolio has six technical articles on SaaS, cloud computing, APIs, cybersecurity, artificial intelligence, and blockchain, with explanatory diagrams.', [{ label: 'Browse technical articles', to: '/writing' }]);
+  if (/\b(article|articles|technical writing|insights|documentation|tutorial|sample|readme|guide|saas|cloud|api|cybersecurity|blockchain|artificial intelligence)\b/.test(question)) {
+    if (/\b(documentation|tutorial|sample|technical writing)\b/.test(question)) return makeReply('writing', 'The portfolio includes independent API documentation, developer tutorial, technical explainer, and software documentation samples. They are self-directed examples, not commissioned client work.', [{ label: 'Browse writing samples', to: '/technical-writing' }, { label: 'Browse technical articles', to: '/writing' }]);
+    return makeReply('articles', 'The portfolio has six technical articles on SaaS, cloud computing, APIs, cybersecurity, artificial intelligence, and blockchain, with explanatory diagrams.', [{ label: 'Browse technical articles', to: '/writing' }, { label: 'Browse documentation samples', to: '/technical-writing' }]);
   }
   if (/\b(who built|who developed|developer behind|built this portfolio)\b/.test(question)) return makeReply('about', 'Godscovenant Patrick Udofe built and maintains this React and Vite portfolio.', [{ label: 'View portfolio project', to: '/projects' }]);
   if (/\b(it|that|those|them|more|one)\b|\bhow about\b/.test(question)) {
@@ -77,5 +79,5 @@ export function answerPortfolioQuestion(rawQuestion, previousTopic = '') {
     if (previousTopic === 'projects') return projectAnswer(question);
     if (previousTopic === 'experience') return makeReply('experience', knowledge.experience);
   }
-  return makeReply('unknown', `I can answer questions about Godscovenant’s technical skills, software projects, engineering contributions, education, résumé, and contact details.`, [{ label: 'Browse projects', to: '/projects' }, { label: 'Browse technical articles', to: '/writing' }, emailLink()]);
+  return makeReply('unknown', `I can answer questions about Godscovenant’s technical writing samples, software projects, technical skills, engineering contributions, education, résumé, and contact details.`, [{ label: 'Browse projects', to: '/projects' }, { label: 'Browse writing samples', to: '/technical-writing' }, { label: 'Browse technical articles', to: '/writing' }, emailLink()]);
 }
